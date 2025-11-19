@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  font-size: 10px;
+}
+
 :root {
   --dark-base-100: #0b1012;
   --dark-base-90: #23282a;
@@ -70,6 +74,15 @@
   --color-secondary-red-100: var(--secondary-red-100);
   --font-sk-modernist: var(--font-sk-modernist);
   --font-inter: var(--font-inter);
+  --text-xs: 1rem;
+  --text-sm: 1.2rem;
+  --text-md: 1.4rem;
+  --text-base: 1.6rem;
+  --text-lg: 2rem;
+  --text-xl: 2.4rem;
+  --text-2xl: 3.2rem;
+  --text-3xl: 4rem;
+  --text-4xl: 4.8rem;
 }
 
 @media (prefers-color-scheme: dark) {
