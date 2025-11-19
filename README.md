@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Name
 
-## Getting Started
+Next.js + TypeScript + TailwindCSS project
 
-First, run the development server:
+## Setup
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` – Run Next.js dev server.
+- `npm run build` – Build the project.
+- `npm run start` – Start production server.
+- `npm run lint` – Run ESLint on all `.ts`, `.tsx`, `.js`, `.jsx` files.
+- `npm run format` – Auto-format code with Prettier.
+- `npm run format:check` – Check code formatting with Prettier.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pre-commit Hooks
 
-## Learn More
+Husky + lint-staged automatically run lint and format checks on staged files:
 
-To learn more about Next.js, take a look at the following resources:
+- Ensures ESLint and Prettier rules are applied before commit.
+- Prevents committing code with unused imports, wrong import order, or formatting issues.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Continuous Integration (CI)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub Actions workflow (`.github/workflows/ci.yml`) runs on push and pull request:
 
-## Deploy on Vercel
+- Lints JavaScript/TypeScript files (`npm run lint`).
+- Checks code formatting (`npm run format:check`).
+- Blocks merges if issues exist.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Code Quality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ESLint configured with `eslint-config-next` for core web vitals and TypeScript.
+- `eslint-plugin-unused-imports` removes unused imports/variables.
+- `eslint-plugin-import` enforces import order.
+- Prettier + `prettier-plugin-tailwindcss` ensures consistent formatting and Tailwind class order.
+
+## Notes
+
+- Developers must run `npm ci` before first use.
+- All commits are automatically checked; CI enforces rules independent of IDE.
