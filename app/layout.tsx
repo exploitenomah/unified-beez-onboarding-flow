@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 import { inter, skModernist } from "@/app/lib/fonts";
-import "./globals.css";
+import Providers from "@/app/providers";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "UnifiedBeez Onboarding Flow",
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${skModernist.variable} ${inter.variable} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
