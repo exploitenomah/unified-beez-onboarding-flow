@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { inter, skModernist } from "@/app/lib/fonts";
 import "./globals.css";
 
