@@ -1,11 +1,9 @@
 "use client";
 
 import { forwardRef } from "react";
-
-import { EyeSlashIcon } from "@/app/assets/svgs/EyeSlash";
-import { EyeIcon } from "@/app/assets/svgs/Eye";
-import { useToggle } from "@/app/hooks/useToggle";
-
+import { EyeSlashIcon } from "@assets/svgs/EyeSlash";
+import { EyeIcon } from "@assets/svgs/Eye";
+import { useToggle } from "@hooks/useToggle";
 import Input from "./Input";
 import { EncryptedInputProps } from "./types";
 

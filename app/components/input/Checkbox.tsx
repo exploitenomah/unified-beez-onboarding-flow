@@ -1,8 +1,6 @@
 "use client";
 import { forwardRef } from "react";
-
-import CheckMark from "@/app/assets/svgs/CheckMark";
-
+import CheckMark from "@assets/svgs/CheckMark";
 import { CheckboxProps } from "./types";
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(

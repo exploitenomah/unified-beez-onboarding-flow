@@ -1,7 +1,6 @@
 "use client";
 
 import { forwardRef } from "react";
-
 import Input from "./Input";
 import { AdornedInputProps } from "./types";
 

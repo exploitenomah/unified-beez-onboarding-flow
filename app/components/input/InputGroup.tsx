@@ -1,7 +1,6 @@
 "use client";
 
 import { forwardRef } from "react";
-
 import { InputGroupProps } from "./types";
 
 const InputGroup = forwardRef<HTMLDivElement, InputGroupProps>(

@@ -36,7 +36,7 @@ const eslintConfig = defineConfig([
             ["parent", "sibling"],
             "index",
           ],
-          "newlines-between": "always",
+          "newlines-between": "never",
         },
       ],
     },
