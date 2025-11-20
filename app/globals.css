@@ -37,6 +37,7 @@ html {
   --secondary-yellow-10: #fef7e6;
   --secondary-green-100: #29953e;
   --secondary-red-100: #cc0e11;
+  --gray-300: #d0d5dd;
 }
 
 @theme inline {
@@ -72,6 +73,7 @@ html {
   --color-secondary-yellow-10: var(--secondary-yellow-10);
   --color-secondary-green-100: var(--secondary-green-100);
   --color-secondary-red-100: var(--secondary-red-100);
+  --color-gray-300: var(--gray-300);
   --font-sk-modernist: var(--font-sk-modernist);
   --font-inter: var(--font-inter);
   --text-xs: 1rem;
@@ -83,4 +85,41 @@ html {
   --text-2xl: 3.2rem;
   --text-3xl: 4rem;
   --text-4xl: 4.8rem;
+  --spacing: 0.4rem;
+  --leading-base: 140%;
+  --radius: 0.4rem;
+  --radius-sm: 0.6rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1rem;
+}
+
+@layer components {
+  .input-group {
+    @apply flex flex-col gap-1.5;
+  }
+  .input-group__label {
+    @apply text-base text-dark-base-100 font-bold leading-base;
+  }
+  .input-group__helper {
+    @apply text-md text-dark-base-40 font-normal leading-base;
+  }
+  .input-group__error {
+    @apply text-md text-secondary-red-100 font-normal leading-base;
+  }
+  .input {
+    @apply transition block w-full px-2.5 py-2 border border-solid border-gray-300 bg-white rounded-md 
+           focus:border-primary-90 focus:outline-none 
+           focus:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)] 
+           text-base text-dark-base-70 placeholder:text-base placeholder:text-dark-base-70;
+  }
+  .input.error {
+    @apply border-secondary-red-100 focus:border-secondary-red-100 focus:outline-none 
+           focus:shadow-[0_1px_2px_0_rgba(204,14,17,0.05),0_0_0_4px_rgba(204,14,17,0.2)];
+  }
+  .checkbox {
+    @apply flex items-center justify-center rounded border-2 cursor-pointer border-gray-300 text-transparent
+           shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90 
+           peer-checked:text-white peer-focus:border-primary-90 focus:outline-none 
+           peer-focus:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];
+  }
 }
