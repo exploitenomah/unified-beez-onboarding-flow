@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
+html {
+  font-size: 10px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dark-base-100: #0b1012;
+  --dark-base-90: #23282a;
+  --dark-base-80: #3c4041;
+  --dark-base-70: #545859;
+  --dark-base-60: #6d7071;
+  --dark-base-50: #858788;
+  --dark-base-40: #9d9fa0;
+  --dark-base-30: #b6b7b8;
+  --dark-base-20: #cecfd0;
+  --dark-base-10: #e7e7e7;
+  --primary-100: #053d27;
+  --primary-90: #1e503d;
+  --primary-80: #376452;
+  --primary-70: #507768;
+  --primary-60: #698b7d;
+  --primary-50: #829e93;
+  --primary-40: #9bb1a9;
+  --primary-30: #b4c5be;
+  --primary-20: #cdd8d4;
+  --primary-10: #e6ece9;
+  --secondary-yellow-100: #fab403;
+  --secondary-yellow-90: #fbbc1c;
+  --secondary-yellow-80: #fbc335;
+  --secondary-yellow-70: #fccb4f;
+  --secondary-yellow-60: #fcd268;
+  --secondary-yellow-50: #fdd981;
+  --secondary-yellow-40: #fde19a;
+  --secondary-yellow-30: #fde9b3;
+  --secondary-yellow-20: #fef0cd;
+  --secondary-yellow-10: #fef7e6;
+  --secondary-green-100: #29953e;
+  --secondary-red-100: #cc0e11;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-dark-base-100: var(--dark-base-100);
+  --color-dark-base-90: var(--dark-base-90);
+  --color-dark-base-80: var(--dark-base-80);
+  --color-dark-base-70: var(--dark-base-70);
+  --color-dark-base-60: var(--dark-base-60);
+  --color-dark-base-50: var(--dark-base-50);
+  --color-dark-base-40: var(--dark-base-40);
+  --color-dark-base-30: var(--dark-base-30);
+  --color-dark-base-20: var(--dark-base-20);
+  --color-dark-base-10: var(--dark-base-10);
+  --color-primary-100: var(--primary-100);
+  --color-primary-90: var(--primary-90);
+  --color-primary-80: var(--primary-80);
+  --color-primary-70: var(--primary-70);
+  --color-primary-60: var(--primary-60);
+  --color-primary-50: var(--primary-50);
+  --color-primary-40: var(--primary-40);
+  --color-primary-30: var(--primary-30);
+  --color-primary-20: var(--primary-20);
+  --color-primary-10: var(--primary-10);
+  --color-secondary-yellow-100: var(--secondary-yellow-100);
+  --color-secondary-yellow-90: var(--secondary-yellow-90);
+  --color-secondary-yellow-80: var(--secondary-yellow-80);
+  --color-secondary-yellow-70: var(--secondary-yellow-70);
+  --color-secondary-yellow-60: var(--secondary-yellow-60);
+  --color-secondary-yellow-50: var(--secondary-yellow-50);
+  --color-secondary-yellow-40: var(--secondary-yellow-40);
+  --color-secondary-yellow-30: var(--secondary-yellow-30);
+  --color-secondary-yellow-20: var(--secondary-yellow-20);
+  --color-secondary-yellow-10: var(--secondary-yellow-10);
+  --color-secondary-green-100: var(--secondary-green-100);
+  --color-secondary-red-100: var(--secondary-red-100);
+  --font-sk-modernist: var(--font-sk-modernist);
+  --font-inter: var(--font-inter);
+  --text-xs: 1rem;
+  --text-sm: 1.2rem;
+  --text-md: 1.4rem;
+  --text-base: 1.6rem;
+  --text-lg: 2rem;
+  --text-xl: 2.4rem;
+  --text-2xl: 3.2rem;
+  --text-3xl: 4rem;
+  --text-4xl: 4.8rem;
 }

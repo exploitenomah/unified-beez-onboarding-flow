@@ -1,4 +1,4 @@
-# Project Name
+# UnifiedBeez Onboarding Flow
 
 Next.js + TypeScript + TailwindCSS project
 
