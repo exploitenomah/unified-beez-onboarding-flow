@@ -15,6 +15,7 @@ html {
   --dark-base-30: #b6b7b8;
   --dark-base-20: #cecfd0;
   --dark-base-10: #e7e7e7;
+  --neutral-100: #1b1b1b;
   --primary-100: #053d27;
   --primary-90: #1e503d;
   --primary-80: #376452;
@@ -38,6 +39,7 @@ html {
   --secondary-green-100: #29953e;
   --secondary-red-100: #cc0e11;
   --gray-300: #d0d5dd;
+  --gray-25: #f8f8f8;
 }
 
 @theme inline {
@@ -51,6 +53,7 @@ html {
   --color-dark-base-30: var(--dark-base-30);
   --color-dark-base-20: var(--dark-base-20);
   --color-dark-base-10: var(--dark-base-10);
+  --color-neutral-100: var(--neutral-10);
   --color-primary-100: var(--primary-100);
   --color-primary-90: var(--primary-90);
   --color-primary-80: var(--primary-80);
@@ -74,6 +77,7 @@ html {
   --color-secondary-green-100: var(--secondary-green-100);
   --color-secondary-red-100: var(--secondary-red-100);
   --color-gray-300: var(--gray-300);
+  --color-gray-25: var(--gray-25);
   --font-sk-modernist: var(--font-sk-modernist);
   --font-inter: var(--font-inter);
   --text-xs: 1rem;
@@ -91,6 +95,7 @@ html {
   --radius-sm: 0.6rem;
   --radius-md: 0.8rem;
   --radius-lg: 1rem;
+  --shadow-sm: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 }
 
 @layer components {
@@ -121,5 +126,34 @@ html {
            shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90 
            peer-checked:text-white peer-focus:border-primary-90 focus:outline-none 
            peer-focus:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];
+  }
+  .btn {
+    @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75;
+  }
+  .btn.secondary {
+    @apply border border-solid border-gray-300 text-dark-base-70 bg-white hover:bg-gray-25 disabled:hover:bg-white;
+  }
+  .btn.primary-primary {
+    @apply border border-solid border-[#267556] 
+           shadow-[inset_0_-5px_10.3px_0_rgba(255,255,255,0.15),inset_0_4px_3.5px_0_rgba(255,255,255,0.10),0_1px_4.1px_0_rgba(16,24,40,0.05)] 
+           bg-primary-100 text-white hover:not-disabled:bg-transparent hover:not-disabled:border-primary-100 hover:not-disabled:text-primary-100;
+  }
+  .btn.tertiary-primary {
+    @apply text-primary-100 border border-solid border-primary-100 hover:not-disabled:bg-[#053D271A] hover:not-disabled:text-primary-100;
+  }
+  .btn.primary-yellow {
+    @apply bg-secondary-yellow-100 text-dark-base-70 hover:not-disabled:bg-[#fab4031a] border border-solid  border-transparent 
+           hover:not-disabled:border-secondary-yellow-100 hover:not-disabled:text-secondary-yellow-100;
+  }
+  .btn.tertiary-yellow {
+    @apply text-secondary-yellow-100 border border-solid border-secondary-yellow-100 
+           hover:not-disabled:bg-[#fab4031a];
+  }
+  .btn.primary-danger {
+    @apply border border-solid border-secondary-red-100 bg-secondary-red-100 text-white 
+            hover:not-disabled:bg-[#CC0E111A] hover:not-disabled:text-secondary-red-100;
+  }
+  .btn.tertiary-danger {
+    @apply text-secondary-red-100 border border-solid border-secondary-red-100 hover:not-disabled:bg-[#CC0E111A];
   }
 }
