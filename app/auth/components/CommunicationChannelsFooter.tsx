@@ -5,7 +5,7 @@ import communicationChannelsInOrder from "../data/communicationChannels.json";
 export default function CommunicationChannelsFooter() {
   return (
     <InfiniteNewsTicker
-      speed={1.2}
+      speed={0.8}
       gap={1}
       className="pt-6"
       items={communicationChannelsInOrder.map((commChannel, idx) => (

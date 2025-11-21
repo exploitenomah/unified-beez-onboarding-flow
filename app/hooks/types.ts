@@ -11,5 +11,5 @@ export interface UsePathnameCheckerOptions {
 }
 
 export interface UseToggleRouteOptions {
-  initialRoute: string;
+  initialRoute: string | ((pathName: string) => string);
 }

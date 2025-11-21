@@ -1,4 +1,3 @@
-import React from "react";
 import { OrDividerProps } from "./types";
 
 export default function OrDivider({

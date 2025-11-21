@@ -9,7 +9,9 @@ export default function AuthFormContainer({
 }: {
   children: React.ReactNode;
 }) {
-  const { currentRoute, goTo } = useToggleRoute({ initialRoute: "sign-up" });
+  const { currentRoute, goTo } = useToggleRoute({
+    initialRoute: (pathname) => pathname.split("/")[2],
+  });
 
   return (
     <div className="my-11 p-8 w-8/9 max-w-130 mx-auto bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem]">

@@ -9,8 +9,9 @@ export default function useToggleRoute({
 }: UseToggleRouteOptions) {
   const router = useRouter();
   const pathname = usePathname();
-  const [currentRoute, setCurrentRoute] = useState(initialRoute);
-
+  const [currentRoute, setCurrentRoute] = useState(
+    typeof initialRoute === "function" ? initialRoute(pathname) : initialRoute,
+  );
   const goTo = useCallback(
     (newRoute: string) => {
       setCurrentRoute(newRoute);
