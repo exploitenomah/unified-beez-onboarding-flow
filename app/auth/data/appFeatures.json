@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "title": "Supercharge your business communication & connect with customers using AI, automation, & multi-channel messaging.",
+    "description": "UnifiedBeez is designed to help any business simplify and supercharge customer communication through AI, automation, and multi-channel messaging. Think of it as your business's AI-powered communication hub.",
+    "testimonial": {
+      "name": "Abiodun",
+      "review": "Unifiedbeez has transformed the way our team communicates. The sheer range of components and the seamless integration of the communication channels into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our communications without compromising on quality.",
+      "role": "Visual Designer",
+      "company": "Google",
+      "avatar": ""
+    },
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-1.png"
+  },
+  {
+    "id": "2",
+    "title": "Connect and grow with AI-powered, multi-channel communication.",
+    "description": "UnifiedBeez is designed to help any business simplify and supercharge customer communication through AI, automation, and multi-channel messaging. Think of it as your business's AI-powered communication hub.",
+    "testimonial": {
+      "name": "Abiodun",
+      "review": "Unifiedbeez has transformed the way our team communicates. The sheer range of components and the seamless integration of the communication channels into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our communications without compromising on quality.",
+      "role": "Visual Designer",
+      "company": "Google",
+      "avatar": ""
+    },
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-2.png"
+  },
+  {
+    "id": "3",
+    "title": "Supercharge your business communication & connect with customers using AI, automation, & multi-channel messaging.",
+    "description": "UnifiedBeez is designed to help any business simplify and supercharge customer communication through AI, automation, and multi-channel messaging. Think of it as your business's AI-powered communication hub.",
+    "testimonial": {
+      "name": "Abiodun",
+      "review": "Unifiedbeez has transformed the way our team communicates. The sheer range of components and the seamless integration of the communication channels into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our communications without compromising on quality.",
+      "role": "Visual Designer",
+      "company": "Google",
+      "avatar": ""
+    },
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-4.png"
+  },
+  {
+    "id": "4",
+    "title": "Supercharge your business communication & connect with customers using AI, automation, & multi-channel messaging.",
+    "description": "UnifiedBeez is designed to help any business simplify and supercharge customer communication through AI, automation, and multi-channel messaging. Think of it as your business's AI-powered communication hub.",
+    "testimonial": {
+      "name": "Abiodun",
+      "review": "Unifiedbeez has transformed the way our team communicates. The sheer range of components and the seamless integration of the communication channels into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our communications without compromising on quality.",
+      "role": "Visual Designer",
+      "company": "Google",
+      "avatar": ""
+    },
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-4.png"
+  }
+]
