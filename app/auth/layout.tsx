@@ -8,7 +8,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const { matches: isAuthEntry } = usePathnameChecker({
-    paths: ["/auth/signup", "/auth/login"],
+    paths: ["/auth/sign-up", "/auth/login"],
   });
 
   if (isAuthEntry)

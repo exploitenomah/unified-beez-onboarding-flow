@@ -38,7 +38,7 @@ export const BaseToggle = ({
       onKeyDown={handleKeyDown}
       className={`
         relative flex rounded-md border border-gray-30 bg-gray-20 overflow-hidden
-        ${isPadded ? "gap-2" : ""}
+        ${isPadded ? "gap-2 p-2" : ""}
         ${className}`}
     >
       {activePos && (
@@ -64,7 +64,7 @@ export const BaseToggle = ({
             role="tab"
             aria-selected={isActive}
             className={`
-              relative z-10 flex items-center gap-2 text-sm transition-all focus:outline-none
+              relative z-10 flex items-center gap-2 text-xs sm:text-base transition-all focus:outline-none
               ${equalWidth ? "flex-1 justify-center" : ""}
               py-2 px-2 rounded-md cursor-pointer
               ${

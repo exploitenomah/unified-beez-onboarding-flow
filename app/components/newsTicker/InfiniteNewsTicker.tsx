@@ -24,7 +24,7 @@ export const InfiniteNewsTicker = ({
         className="inline-flex whitespace-nowrap"
         style={{ gap: `${gap}px` }}
       >
-        {[...items, ...items].map((item, idx) => (
+        {[...items, ...items, ...items].map((item, idx) => (
           <div key={idx} className="shrink-0">
             {item}
           </div>

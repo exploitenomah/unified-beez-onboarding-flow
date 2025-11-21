@@ -9,3 +9,7 @@ export interface UsePathnameCheckerOptions {
   paths?: string[];
   prefix?: string;
 }
+
+export interface UseToggleRouteOptions {
+  initialRoute: string;
+}
