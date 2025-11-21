@@ -16,3 +16,10 @@ export interface FeatureStoriesProps {
   stories: FeatureStory[];
   interval?: number;
 }
+
+export interface OrDividerProps {
+  text?: string;
+  className?: string;
+  lineColor?: string;
+  textColor?: string;
+}

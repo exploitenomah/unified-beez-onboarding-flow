@@ -12,7 +12,7 @@ export default function AuthFormContainer({
   const { currentRoute, goTo } = useToggleRoute({ initialRoute: "sign-up" });
 
   return (
-    <div className="p-8 w-8/9 max-w-130 mx-auto bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem]">
+    <div className="my-11 p-8 w-8/9 max-w-130 mx-auto bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem]">
       <Image
         src="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/UNIFIEDBEEZ%20-LOGO-PRIMARY-1.png"
         alt="UnifiedBeez Logo"
@@ -29,6 +29,7 @@ export default function AuthFormContainer({
         isPadded
         equalWidth
         onChange={(v) => goTo(v.toString())}
+        className="mb-4"
       />
       {children}
       <OrDivider

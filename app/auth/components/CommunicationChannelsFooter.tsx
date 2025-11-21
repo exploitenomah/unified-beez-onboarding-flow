@@ -7,7 +7,7 @@ export default function CommunicationChannelsFooter() {
     <InfiniteNewsTicker
       speed={1.2}
       gap={1}
-      className="py-8"
+      className="pt-6"
       items={communicationChannelsInOrder.map((commChannel, idx) => (
         <Image
           key={commChannel}

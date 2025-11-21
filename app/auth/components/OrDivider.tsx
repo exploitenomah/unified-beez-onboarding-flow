@@ -1,11 +1,5 @@
 import React from "react";
-
-interface OrDividerProps {
-  text?: string;
-  className?: string;
-  lineColor?: string;
-  textColor?: string;
-}
+import { OrDividerProps } from "./types";
 
 export default function OrDivider({
   text = "OR",

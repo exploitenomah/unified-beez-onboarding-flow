@@ -127,7 +127,7 @@ html {
            focus:not-disabled:shadow-[0_1px_2px_0_rgba(204,14,17,0.05),0_0_0_4px_rgba(204,14,17,0.2)];
   }
   .checkbox {
-    @apply flex items-center justify-center rounded border-2 cursor-pointer border-gray-30 text-transparent
+    @apply bg-white flex items-center justify-center rounded border-2 cursor-pointer border-gray-30 text-transparent
            shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90 
            peer-checked:text-white peer-focus:not-disabled:border-primary-90 focus:not-disabled:outline-none 
            peer-focus:not-disabled:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];

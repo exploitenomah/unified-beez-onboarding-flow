@@ -13,7 +13,7 @@ export default function SignupAndLoginLayout({
       <div className="hidden h-dvh lg:block">
         <AppFeaturesSlide stories={appFeatures} interval={4000} />
       </div>
-      <div className="h-dvh grid grid-col grid-rows-[1fr_8rem] items-center bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)]">
+      <div className="h-dvh overflow-auto grid grid-col grid-rows-[1fr_10rem] items-center bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)]">
         <AuthFormContainer>{children}</AuthFormContainer>
         <CommunicationChannelsFooter />
       </div>
