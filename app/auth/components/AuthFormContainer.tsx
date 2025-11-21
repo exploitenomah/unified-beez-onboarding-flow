@@ -74,6 +74,11 @@ export default function AuthFormContainer({
           Microsoft
         </AuthProviderButton>
       </div>
+      <span className="block text-dark-base-70 text-xs text-center max-w-[31.4rem] mx-auto mt-6">
+        By continuing, you agree to UnifiedBeez&apos;s{" "}
+        <a href="#">Terms of Service</a> and acknowledge that you&apos;ve read
+        our <a href="#">Privacy Policy</a>.
+      </span>
     </div>
   );
 }
