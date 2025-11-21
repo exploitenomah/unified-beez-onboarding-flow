@@ -117,19 +117,19 @@ html {
   }
   .input {
     @apply transition block w-full px-2.5 py-2 border border-solid border-gray-30 bg-white rounded-md 
-           focus:border-primary-90 focus:outline-none 
-           focus:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)] 
-           text-base text-dark-base-70 placeholder:text-base placeholder:text-dark-base-70;
+           focus:not-disabled:border-primary-90 focus:not-disabled:outline-none 
+           focus:not-disabled:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)] 
+           text-base text-dark-base-70 placeholder:text-base placeholder:text-dark-base-70 disabled:bg-gray-25;
   }
   .input.error {
-    @apply border-secondary-red-100 focus:border-secondary-red-100 focus:outline-none 
-           focus:shadow-[0_1px_2px_0_rgba(204,14,17,0.05),0_0_0_4px_rgba(204,14,17,0.2)];
+    @apply border-secondary-red-100 focus:not-disabled:border-secondary-red-100 focus:not-disabled:outline-none 
+           focus:not-disabled:shadow-[0_1px_2px_0_rgba(204,14,17,0.05),0_0_0_4px_rgba(204,14,17,0.2)];
   }
   .checkbox {
     @apply flex items-center justify-center rounded border-2 cursor-pointer border-gray-30 text-transparent
            shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90 
-           peer-checked:text-white peer-focus:border-primary-90 focus:outline-none 
-           peer-focus:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];
+           peer-checked:text-white peer-focus:not-disabled:border-primary-90 focus:not-disabled:outline-none 
+           peer-focus:not-disabled:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];
   }
   .btn {
     @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75;
