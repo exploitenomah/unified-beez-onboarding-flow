@@ -5,7 +5,7 @@ import communicationChannelsInOrder from "../data/communicationChannels.json";
 export default function CommunicationChannelsFooter() {
   return (
     <InfiniteNewsTicker
-      speed={0.8}
+      speed={0.5}
       gap={1}
       className="pt-6"
       items={communicationChannelsInOrder.map((commChannel, idx) => (
@@ -14,7 +14,7 @@ export default function CommunicationChannelsFooter() {
           width={75}
           height={75}
           alt={`${commChannel} logo`}
-          className="animate-pulsse animate-bounce"
+          className="animate-bounce duration-[2s]"
           src={`https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/comm-channel-logo-${idx + 1}.png`}
           style={{
             animationDelay: `${idx * 0.2}s`,
