@@ -40,38 +40,20 @@ export default function AuthFormContainer({
       />
       <div className="flex gap-3 justify-center items-center">
         <AuthProviderButton
-          authIcon={
-            <Image
-              src="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/google-logo.png"
-              alt="google logo"
-              width={24}
-              height={24}
-            />
-          }
+          iconSrc="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/google-logo.png"
+          iconAlt="google logo"
         >
           Google
         </AuthProviderButton>
         <AuthProviderButton
-          authIcon={
-            <Image
-              src="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/apple-logo.png"
-              alt="Apple logo"
-              width={24}
-              height={24}
-            />
-          }
+          iconSrc="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/apple-logo.png"
+          iconAlt="Apple logo"
         >
           Apple ID
         </AuthProviderButton>
         <AuthProviderButton
-          authIcon={
-            <Image
-              src="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/microsoft-logo.png"
-              alt="microsoft logo"
-              width={24}
-              height={24}
-            />
-          }
+          iconSrc="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/microsoft-logo.png"
+          iconAlt="microsoft logo"
         >
           Microsoft
         </AuthProviderButton>

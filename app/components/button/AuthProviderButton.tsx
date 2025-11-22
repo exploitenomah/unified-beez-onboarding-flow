@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AuthProviderButtonProps } from "./types";
 
 const AuthProviderButton = ({
@@ -5,7 +6,8 @@ const AuthProviderButton = ({
   disabled = false,
   fullWidth = false,
   className,
-  authIcon,
+  iconSrc,
+  iconAlt,
   ...props
 }: AuthProviderButtonProps) => {
   return (
@@ -19,7 +21,7 @@ const AuthProviderButton = ({
       disabled={disabled}
       {...props}
     >
-      {authIcon && <span>{authIcon}</span>}
+      {iconSrc && <Image src={iconSrc} alt={iconAlt} width={24} height={24} />}
       <span className="hidden md:inline lg:hidden xl:inline">{children}</span>
     </button>
   );

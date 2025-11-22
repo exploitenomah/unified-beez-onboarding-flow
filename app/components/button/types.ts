@@ -22,6 +22,7 @@ export interface ButtonPropsWithoutColor extends ButtonProps {
 
 export interface AuthProviderButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  authIcon: React.ReactNode;
+  iconAlt: string;
+  iconSrc: string;
   fullWidth?: boolean;
 }
