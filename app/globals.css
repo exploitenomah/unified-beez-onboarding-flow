@@ -161,4 +161,7 @@ html {
   .btn.tertiary-danger {
     @apply text-secondary-red-100 border border-solid border-secondary-red-100 hover:not-disabled:bg-[#CC0E111A];
   }
+  .icon {
+    @apply flex items-center justify-center border-[#EEFDF1] border-8 bg-[#DBF0DF] p-1 rounded-[2.8rem];
+  }
 }
