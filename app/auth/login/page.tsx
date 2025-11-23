@@ -1,3 +1,4 @@
+import TextButton from "@/app/components/button/TextButton";
 import Checkbox from "@/app/components/input/Checkbox";
 import Button from "@components/button/Button";
 import EncryptedInput from "@components/input/EncryptedInput";
@@ -17,13 +18,19 @@ export default function SignupPage() {
       <InputGroup
         className="w-full"
         label="Password"
-        helperText="Enter a strong password"
+        helperText="Enter your password"
       >
         <EncryptedInput />
       </InputGroup>
-
-      <div>
+      <div className="flex items-center justify-between">
         <Checkbox label="Remember me" />
+        <TextButton
+          as="a"
+          href="/auth/forgot-password"
+          className="text-primary-100"
+        >
+          Forgot Password?
+        </TextButton>
       </div>
       <Button className="mt-6" fullWidth variant="primary" color="primary">
         Log In

@@ -26,3 +26,14 @@ export interface AuthProviderButtonProps
   iconSrc: string;
   fullWidth?: boolean;
 }
+
+export interface TextButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  as?: string;
+  href?: never;
+}
+export interface TextButtonAsLinkProps
+  extends React.LinkHTMLAttributes<HTMLAnchorElement> {
+  as?: string;
+  disabled?: never;
+}
