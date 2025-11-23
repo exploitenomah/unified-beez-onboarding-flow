@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { inter, skModernist } from "@lib/fonts";
 import Providers from "./providers";
-import "@app/globals.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "UnifiedBeez Onboarding Flow",
