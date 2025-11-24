@@ -7,6 +7,7 @@ import { toastPromise } from "@lib/toast";
 import useValidateWithZodSchema from "@hooks/useValidateWithZodSchema";
 import { SignupFormSchema } from "./types";
 import { signupSchema } from "./schemas";
+import { SIGNUP_REDIRECT_ROUTE } from "./constants";
 
 export function useSignupState() {
   const [formData, setFormData] = useState<SignupFormSchema>({
@@ -64,7 +65,7 @@ export async function signupUser(formData: SignupFormSchema) {
       success: "Account created!",
       error: "Something went wrong",
     },
-  ).then(() => redirect("/auth/verify-email"));
+  ).then(() => redirect(SIGNUP_REDIRECT_ROUTE));
 }
 
 export const preventEventDefaultAndCall = (e: FormEvent, fn: () => void) => {

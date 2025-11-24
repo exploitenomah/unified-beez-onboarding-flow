@@ -10,7 +10,7 @@ export const passwordSchema = z
 
 export const signupSchema = z
   .object({
-    email: z.string().email("Invalid email"),
+    email: z.email("Invalid email"),
     password: passwordSchema,
     confirmPassword: z.string(),
   })

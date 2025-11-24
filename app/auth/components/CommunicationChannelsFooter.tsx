@@ -14,7 +14,7 @@ export default function CommunicationChannelsFooter() {
           width={75}
           height={75}
           alt={`${commChannel} logo`}
-          className="animate-bounce duration-[2s]"
+          className="animate-bounce duration-[2s] w-auto h-auto"
           src={`https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/comm-channel-logo-${idx + 1}.png`}
           style={{
             animationDelay: `${idx * 0.2}s`,
