@@ -8,6 +8,7 @@ export interface ButtonProps
   fullWidth?: boolean;
   endIcon?: React.ReactNode;
   startIcon?: React.ReactNode;
+  isLoading?: boolean;
 }
 
 export interface ButtonPropsWithColor extends ButtonProps {

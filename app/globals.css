@@ -141,7 +141,7 @@ html {
   .btn.primary-primary {
     @apply border border-solid border-[#267556] 
            shadow-[inset_0_-5px_10.3px_0_rgba(255,255,255,0.15),inset_0_4px_3.5px_0_rgba(255,255,255,0.10),0_1px_4.1px_0_rgba(16,24,40,0.05)] 
-           bg-primary-100 text-white hover:not-disabled:bg-transparent hover:not-disabled:border-primary-100 hover:not-disabled:text-primary-100;
+           bg-primary-100 text-white hover:not-disabled:bg-white hover:not-disabled:border-primary-100 hover:not-disabled:text-primary-100;
   }
   .btn.tertiary-primary {
     @apply text-primary-100 border border-solid border-primary-100 hover:not-disabled:bg-[#053D271A] hover:not-disabled:text-primary-100;

@@ -9,6 +9,7 @@ const Button = ({
   className,
   endIcon,
   startIcon,
+  isLoading,
   ...props
 }: ButtonPropsWithColor | ButtonPropsWithoutColor) => {
   return (
@@ -21,7 +22,7 @@ const Button = ({
       {...props}
     >
       {startIcon && <span>{startIcon}</span>}
-      {children}
+      {isLoading ? <>Please wait...</> : <>{children}</>}
       {endIcon && <span>{endIcon}</span>}
     </button>
   );
