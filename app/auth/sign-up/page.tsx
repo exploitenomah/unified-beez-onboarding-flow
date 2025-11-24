@@ -5,12 +5,12 @@ import Button from "@components/button/Button";
 import EncryptedInput from "@components/input/EncryptedInput";
 import Input from "@components/input/Input";
 import InputGroup from "@components/input/InputGroup";
+import AppForm from "@components/form/AppForm";
 import {
   usePasswordRulesValidation,
   useSignupState,
   useValidateSignupForm,
   signupUser,
-  preventEventDefaultAndCall,
 } from "./hooks";
 
 export default function SignupPage() {
@@ -20,10 +20,8 @@ export default function SignupPage() {
   const { run: handleSubmit, isLoading } = useAsyncAction(signupUser);
 
   return (
-    <form
-      onSubmit={(e) =>
-        preventEventDefaultAndCall(e, () => handleSubmit(formData))
-      }
+    <AppForm
+      onSubmit={() => handleSubmit(formData)}
       className="flex flex-col gap-4"
     >
       <InputGroup
@@ -88,6 +86,6 @@ export default function SignupPage() {
       >
         Create Account
       </Button>
-    </form>
+    </AppForm>
   );
 }

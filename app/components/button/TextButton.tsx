@@ -11,7 +11,7 @@ const TextButton = ({
   return createElement(
     as || "a",
     {
-      className: `text-btn 
+      className: `text-btn
         ${className}`,
       disabled,
       ...props,

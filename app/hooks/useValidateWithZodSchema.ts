@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-import { ZodObject } from "zod";
+import { _ZodType } from "zod";
 
 export default function useValidateWithZodSchema<T>(
-  schema: ZodObject,
+  schema: _ZodType,
   formData: T,
 ) {
   const validation = useMemo(() => {

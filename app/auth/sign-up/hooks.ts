@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { redirect } from "next/navigation";
 import { fakeRequest } from "@lib/api";
 import { toastPromise } from "@lib/toast";
@@ -67,8 +67,3 @@ export async function signupUser(formData: SignupFormSchema) {
     },
   ).then(() => redirect(SIGNUP_REDIRECT_ROUTE));
 }
-
-export const preventEventDefaultAndCall = (e: FormEvent, fn: () => void) => {
-  e.preventDefault();
-  fn();
-};

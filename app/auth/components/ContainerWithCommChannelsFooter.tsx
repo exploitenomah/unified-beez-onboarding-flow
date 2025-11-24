@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "@node_modules/@types/react";
+import { PropsWithChildren } from "react";
 import CommunicationChannelsFooter from "./CommunicationChannelsFooter";
 
 export default function ContainerWithCommChannelsFooter({

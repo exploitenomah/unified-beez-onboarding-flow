@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InfiniteNewsTicker } from "@app/components/newsTicker/InfiniteNewsTicker";
+import { InfiniteNewsTicker } from "@components/newsTicker/InfiniteNewsTicker";
 import communicationChannelsInOrder from "../data/communicationChannels.json";
 
 export default function CommunicationChannelsFooter() {

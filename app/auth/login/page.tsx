@@ -6,12 +6,8 @@ import Button from "@components/button/Button";
 import EncryptedInput from "@components/input/EncryptedInput";
 import Input from "@components/input/Input";
 import InputGroup from "@components/input/InputGroup";
-import {
-  loginUser,
-  preventEventDefaultAndCall,
-  useLoginState,
-  useValidateLoginForm,
-} from "./hooks";
+import AppForm from "@components/form/AppForm";
+import { loginUser, useLoginState, useValidateLoginForm } from "./hooks";
 
 export default function LoginPage() {
   const { formData, updateFormData } = useLoginState();
@@ -19,10 +15,8 @@ export default function LoginPage() {
   const { run: handleSubmit, isLoading } = useAsyncAction(loginUser);
 
   return (
-    <form
-      onSubmit={(e) =>
-        preventEventDefaultAndCall(e, () => handleSubmit(formData))
-      }
+    <AppForm
+      onSubmit={() => handleSubmit(formData)}
       className="flex flex-col gap-4"
     >
       <InputGroup
@@ -76,6 +70,6 @@ export default function LoginPage() {
       >
         Log In
       </Button>
-    </form>
+    </AppForm>
   );
 }
