@@ -1,6 +1,7 @@
 "use client";
 import { usePathnameChecker } from "@hooks/usePathnameChecker";
 import SignupAndLoginLayout from "./components/SignupAndLoginLayout";
+import ContainerWithCommChannelsFooter from "./components/ContainerWithCommChannelsFooter";
 
 export default function AuthLayout({
   children,
@@ -13,5 +14,9 @@ export default function AuthLayout({
 
   if (isAuthEntry)
     return <SignupAndLoginLayout>{children}</SignupAndLoginLayout>;
-  return <>{children}</>;
+  return (
+    <ContainerWithCommChannelsFooter>
+      {children}
+    </ContainerWithCommChannelsFooter>
+  );
 }

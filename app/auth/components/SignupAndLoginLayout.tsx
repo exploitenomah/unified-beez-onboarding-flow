@@ -1,7 +1,7 @@
-import CommunicationChannelsFooter from "./CommunicationChannelsFooter";
 import appFeatures from "../data/appFeatures.json";
 import AppFeaturesSlide from "./AppFeaturesSlide";
 import AuthFormContainer from "./AuthFormContainer";
+import ContainerWithCommChannelsFooter from "./ContainerWithCommChannelsFooter";
 
 export default function SignupAndLoginLayout({
   children,
@@ -13,10 +13,9 @@ export default function SignupAndLoginLayout({
       <div className="hidden h-dvh lg:block">
         <AppFeaturesSlide stories={appFeatures} interval={4000} />
       </div>
-      <div className="h-dvh overflow-auto grid grid-col grid-rows-[1fr_10rem] items-center bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)]">
+      <ContainerWithCommChannelsFooter>
         <AuthFormContainer>{children}</AuthFormContainer>
-        <CommunicationChannelsFooter />
-      </div>
+      </ContainerWithCommChannelsFooter>
     </div>
   );
 }
