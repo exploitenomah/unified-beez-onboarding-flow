@@ -137,7 +137,7 @@ html {
            placeholder:text-dark-base-40 placeholder:text-4xl placeholder:text-center;
   }
   .btn {
-    @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75;
+    @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none;
   }
   .btn.secondary {
     @apply border border-solid border-gray-30 text-dark-base-70 bg-white hover:bg-gray-25 disabled:hover:bg-white;
@@ -173,5 +173,14 @@ html {
   }
   .sub-text {
     @apply leading-base text-md font-normal text-dark-base-70;
+  }
+  .onboarding-step-card {
+    @apply w-8/9 mx-auto p-10 bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem];
+  }
+  .app-modal {
+    @apply fixed;
+  }
+  .app-modal-overlay {
+    @apply fixed w-screen h-screen bg-black/25 backdrop-blur-[25px] flex;
   }
 }

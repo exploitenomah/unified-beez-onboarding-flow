@@ -1,10 +1,14 @@
+"use client";
 import ContainerWithCommChannelsFooter from "@app/auth/components/ContainerWithCommChannelsFooter";
 import BeeIcon from "@assets/svgs/BeeIcon";
 import RightChevron from "@assets/svgs/RightChevron";
 import Button from "@components/button/Button";
 import OnboardingStepCardWithHeader from "@components/cards/OnboardingStepCardWithHeader";
+import useToggleRoute from "@hooks/useToggleRoute";
 
 export default function OnboardingWelcome() {
+  const { goTo } = useToggleRoute();
+
   return (
     <ContainerWithCommChannelsFooter>
       <OnboardingStepCardWithHeader
@@ -19,6 +23,7 @@ export default function OnboardingWelcome() {
           Let BeeZora Set Everything Up For Me
         </Button>
         <Button
+          onClick={() => goTo("/onboarding/step-")}
           endIcon={<RightChevron className="ml-2" />}
           fullWidth
           variant="primary"

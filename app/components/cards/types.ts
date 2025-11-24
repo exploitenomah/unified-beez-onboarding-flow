@@ -15,13 +15,17 @@ export interface OnboardingStepCardWithHeaderImage
   imageSrc?: string;
   imageAlt?: string;
   icon?: never;
+  imageWidth?: number;
+  imageHeight?: number;
 }
 export interface OnboardingStepCardWithHeaderIcon
   extends OnboardingStepCardProps {
   type: "icon";
+  icon?: React.ReactNode;
   imageSrc?: never;
   imageAlt?: never;
-  icon?: React.ReactNode;
+  imageWidth?: never;
+  imageHeight?: never;
 }
 
 export interface HeadingAndSubHeadingProps {

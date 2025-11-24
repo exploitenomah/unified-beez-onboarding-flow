@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { isNull, isUndefined } from "@utils/is";
+import { isNull, isUndefined } from "@app/utils/is";
 
 export default function useFormStateManager<
   T extends Record<string, string | number | boolean | undefined>,

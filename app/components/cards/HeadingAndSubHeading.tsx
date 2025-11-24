@@ -1,4 +1,4 @@
-import { isString } from "@utils/is";
+import { isString } from "@app/utils/is";
 import { HeadingAndSubHeadingProps } from "./types";
 
 export default function HeadingAndSubHeading({

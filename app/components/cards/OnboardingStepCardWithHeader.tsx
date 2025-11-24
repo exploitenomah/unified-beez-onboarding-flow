@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { isString, isUndefined } from "@utils/is";
+import { isString, isUndefined } from "@app/utils/is";
 import Icon from "@components/icons/Icon";
 import OnboardingStepCard from "./OnboardingStepCard";
 import {
@@ -14,6 +14,8 @@ export default function OnboardingStepCardWithHeader({
   children,
   imageSrc,
   imageAlt,
+  imageWidth,
+  imageHeight,
   icon,
   type,
   heading,
@@ -28,7 +30,13 @@ export default function OnboardingStepCardWithHeader({
         ${icon ? "p-2 bg-white rounded-md border border-[#ECECEC] shadow-[1px_3px_6.9px_0_rgba(0,0,0,0.10)]" : ""}`}
         >
           {type === "image" && isString(imageSrc) && isString(imageAlt) && (
-            <Image src={imageSrc} alt={imageAlt} width={260} height={84} />
+            <Image
+              loading="eager"
+              src={imageSrc}
+              alt={imageAlt}
+              width={imageWidth || 260}
+              height={imageHeight || 84}
+            />
           )}
           {type === "icon" && !isUndefined(icon) && <Icon icon={icon} />}
         </div>
