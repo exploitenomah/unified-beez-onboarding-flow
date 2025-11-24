@@ -3,16 +3,28 @@ export interface OnboardingStepCardProps {
   children: React.ReactNode;
 }
 
-export interface OnboardingStepCardWithHeaderImageProps
+export interface OnboardingStepCardWithHeader extends OnboardingStepCardProps {
+  type: "image" | "icon";
+  imageSrc?: string;
+  imageAlt?: string;
+  icon?: React.ReactNode;
+}
+export interface OnboardingStepCardWithHeaderImage
   extends OnboardingStepCardProps {
-  imageSrc: string;
-  imageAlt: string;
+  type: "image";
+  imageSrc?: string;
+  imageAlt?: string;
   icon?: never;
 }
-
-export interface OnboardingStepCardWithHeaderIconProps
+export interface OnboardingStepCardWithHeaderIcon
   extends OnboardingStepCardProps {
-  icon: React.ReactNode;
+  type: "icon";
   imageSrc?: never;
   imageAlt?: never;
+  icon?: React.ReactNode;
+}
+
+export interface HeadingAndSubHeadingProps {
+  heading?: string;
+  subHeading?: string;
 }

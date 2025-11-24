@@ -2,15 +2,19 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { UseToggleRouteOptions } from "./types";
+import { isFunction, isUndefined } from "@utils/is";
 
-export default function useToggleRoute({
-  initialRoute,
-}: UseToggleRouteOptions) {
+export default function useToggleRoute(
+  initialRoute?: string | ((pathName: string) => string),
+) {
   const router = useRouter();
   const pathname = usePathname();
   const [currentRoute, setCurrentRoute] = useState(
-    typeof initialRoute === "function" ? initialRoute(pathname) : initialRoute,
+    !isUndefined(initialRoute)
+      ? isFunction(initialRoute)
+        ? initialRoute(pathname)
+        : initialRoute
+      : pathname,
   );
   const goTo = useCallback(
     (newRoute: string) => {

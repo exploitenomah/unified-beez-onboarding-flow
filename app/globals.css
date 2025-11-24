@@ -162,9 +162,12 @@ html {
     @apply text-secondary-red-100 border border-solid border-secondary-red-100 hover:not-disabled:bg-[#CC0E111A];
   }
   .text-btn {
-    @apply text-md underline leading-base font-normal;
+    @apply text-md underline leading-base font-normal cursor-pointer;
   }
   .icon {
-    @apply flex items-center justify-center border-[#EEFDF1] border-8 bg-[#DBF0DF] p-1 rounded-[2.8rem];
+    @apply flex items-center justify-center border-[#EEFDF1] border-8 bg-[#DBF0DF] p-2 rounded-[2.8rem];
+  }
+  .sub-text {
+    @apply leading-base text-md font-normal text-dark-base-70;
   }
 }

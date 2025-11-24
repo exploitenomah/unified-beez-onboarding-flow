@@ -1,5 +1,5 @@
 import useToggleRoute from "@hooks/useToggleRoute";
-import OnboardingStepCardWithHeaderImage from "@components/cards/OnboardingStepCardWithHeaderImage";
+import OnboardingStepCardWithHeader from "@components/cards/OnboardingStepCardWithHeader";
 import AuthProviderButton from "@components/button/AuthProviderButton";
 import { BaseToggle } from "@components/toggle/BaseToggle";
 import OrDivider from "./OrDivider";
@@ -7,12 +7,13 @@ import OrDivider from "./OrDivider";
 export default function AuthFormContainer({
   children,
 }: React.PropsWithChildren) {
-  const { currentRoute, goTo } = useToggleRoute({
-    initialRoute: (pathname) => pathname.split("/")[2],
-  });
+  const { currentRoute, goTo } = useToggleRoute(
+    (pathname) => pathname.split("/")[2],
+  );
 
   return (
-    <OnboardingStepCardWithHeaderImage
+    <OnboardingStepCardWithHeader
+      type="image"
       imageSrc="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/UNIFIEDBEEZ%20-LOGO-PRIMARY-1.png"
       imageAlt="UnifiedBeez Logo"
       className="my-11 w-8/9 max-w-130 mx-auto"
@@ -58,6 +59,6 @@ export default function AuthFormContainer({
         <a href="#">Terms of Service</a> and acknowledge that you&apos;ve read
         our <a href="#">Privacy Policy</a>.
       </span>
-    </OnboardingStepCardWithHeaderImage>
+    </OnboardingStepCardWithHeader>
   );
 }
