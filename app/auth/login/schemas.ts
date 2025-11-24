@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { passwordSchema } from "../sign-up/schemas";
+import { passwordSchema } from "@lib/schemas/password";
 
 export const loginSchema = z.object({
   email: z.email("Invalid email"),

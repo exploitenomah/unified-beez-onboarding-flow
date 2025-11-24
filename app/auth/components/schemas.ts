@@ -1,13 +1,13 @@
 import { z } from "zod";
 import { passwordSchema } from "@lib/schemas/password";
 
-export const signupSchema = z
+export const passwordChangeSchema = z
   .object({
-    email: z.email("Invalid email"),
-    password: passwordSchema,
+    oldPassword: z.string(),
+    newPassword: passwordSchema,
     confirmPassword: z.string(),
   })
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine((data) => data.newPassword === data.confirmPassword, {
     message: "Passwords must match",
     path: ["confirmPassword"],
   });

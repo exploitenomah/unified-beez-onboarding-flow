@@ -1,3 +1,6 @@
+import z from "zod";
+import { passwordChangeSchema } from "./schemas";
+
 export interface FeatureStory {
   id: string;
   title: string;
@@ -22,4 +25,9 @@ export interface OrDividerProps {
   className?: string;
   lineColor?: string;
   textColor?: string;
+}
+
+export type PasswordChangeSchema = z.infer<typeof passwordChangeSchema>;
+export interface PasswordFormProps {
+  onSubmit: (formData: PasswordChangeSchema) => void;
 }

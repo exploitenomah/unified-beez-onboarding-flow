@@ -20,13 +20,13 @@
       }
     ],
     "paths": {
-      "@assets/*": ["app/assets/*"],
-      "@components/*": ["app/components/*"],
+      "@assets/*": ["./app/assets/*"],
+      "@components/*": ["./app/components/*"],
       "@hooks/*": ["./app/hooks/*"],
       "@lib/*": ["./app/lib/*"],
       "@utils/*": ["./app/utils/*"],
       "@store/*": ["./app/store/*"],
-      "@app": ["./app/*"]
+      "@app/*": ["./app/*"]
     }
   },
   "include": [

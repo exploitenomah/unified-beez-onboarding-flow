@@ -1,33 +1,19 @@
 "use client";
-
-import { useCallback, useState } from "react";
 import { redirect } from "next/navigation";
 import { fakeRequest } from "@lib/api";
 import { toastPromise } from "@lib/toast";
 import useValidateWithZodSchema from "@hooks/useValidateWithZodSchema";
+import useFormStateManager from "@hooks/useFormStateManager";
 import { loginSchema } from "./schemas";
 import { LoginFormSchema } from "./types";
 import { LOGIN_REDIRECT_ROUTE } from "./constants";
 
 export function useLoginState() {
-  const [formData, setFormData] = useState<LoginFormSchema>({
+  return useFormStateManager({
     email: "",
     password: "",
     rememberMe: false,
   });
-  const updateFormData = useCallback(
-    (field: keyof LoginFormSchema, value: string | boolean) => {
-      setFormData((prev) => ({ ...prev, [field]: value }));
-    },
-    [],
-  );
-  return {
-    formData,
-    updateFormData,
-    allFieldsArePresent: Object.values(formData).every((value) =>
-      Boolean(value),
-    ),
-  };
 }
 
 export function useValidateLoginForm(formData: LoginFormSchema) {
