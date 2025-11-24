@@ -43,10 +43,10 @@ export interface CheckboxProps
 }
 
 export interface OTPInputProps {
-  length?: number
-  onChange?: (otp: string) => void
-  autoFocus?: boolean
-  className?: string
-  error?: string
-  hasError?: boolean
+  length?: number;
+  onChange?: (otp: string) => void;
+  autoFocus?: boolean;
+  className?: string;
+  error?: string;
+  hasError?: boolean;
 }
