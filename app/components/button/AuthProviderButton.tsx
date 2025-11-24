@@ -1,0 +1,30 @@
+import Image from "next/image";
+import { AuthProviderButtonProps } from "./types";
+
+const AuthProviderButton = ({
+  children,
+  disabled = false,
+  fullWidth = false,
+  className,
+  iconSrc,
+  iconAlt,
+  ...props
+}: AuthProviderButtonProps) => {
+  return (
+    <button
+      className={`
+        xl:min-w-34.5 flex justify-center items-center gap-2 py-2.5 px-4 rounded-md text-neutral-100 bg-white
+        text-md font-normal shadow-sm border border-solid border-gray-300 hover:not-disabled:bg-gray-25 cursor-pointer
+        disabled:cursor-not-allowed disabled:bg-gray-25 disabled:text-dark-base-40
+        ${fullWidth ? "w-full" : "w-fit"} 
+        ${className}`}
+      disabled={disabled}
+      {...props}
+    >
+      {iconSrc && <Image src={iconSrc} alt={iconAlt} width={24} height={24} />}
+      <span className="hidden md:inline lg:hidden xl:inline">{children}</span>
+    </button>
+  );
+};
+
+export default AuthProviderButton;

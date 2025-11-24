@@ -36,9 +36,18 @@ const eslintConfig = defineConfig([
             ["parent", "sibling"],
             "index",
           ],
-          "newlines-between": "always",
+          "newlines-between": "never",
         },
       ],
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: ["../../*", "app/*"],
+        },
+      ],
+
+      // always prefer alias path if available
+      "import/no-unresolved": "error",
     },
   },
 ]);

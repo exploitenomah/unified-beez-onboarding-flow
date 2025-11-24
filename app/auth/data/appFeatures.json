@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "title": "Supercharge your business communication & connect with customers using AI, automation, & multi-channel messaging.",
+    "description": " UnifiedBeez is designed to help any business simplify and supercharge customer communication through AI, automation, and multi-channel messaging. Think of it as your business's AI-powered communication hub.",
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-1.png",
+    "testimonial": {
+      "review": "UnifiedBeez transformed our project management. The ability to track tasks across multiple channels and communicate seamlessly has boosted our team's productivity tremendously.",
+      "name": "Chinelo",
+      "role": "Project Manager",
+      "company": "Microsoft",
+      "avatar": "user.png"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Streamline Your Team Collaboration Effortlessly",
+    "description": "UnifiedBeez enables teams to collaborate in real-time, manage projects seamlessly, and stay aligned on tasks across multiple channels, all in one unified workspace.",
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-2.png",
+    "testimonial": {
+      "review": "UnifiedBeez transformed our project management. The ability to track tasks across multiple channels and communicate seamlessly has boosted our team's productivity tremendously.",
+      "name": "Chinelo",
+      "role": "Project Manager",
+      "company": "Microsoft",
+      "avatar": "user.png"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Automate Customer Engagement With Ease",
+    "description": "Reach your customers at the right time, with the right message, on any platform. UnifiedBeez automates engagement so you can focus on what matters most: your business.",
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-3.png",
+    "testimonial": {
+      "review": "Automating customer engagement with UnifiedBeez saved us countless hours. The platform is intuitive and flexible, and our conversion rates have improved dramatically.",
+      "name": "Emeka",
+      "role": "Marketing Lead",
+      "company": "Amazon",
+      "avatar": "user.png"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Gain Insights with Advanced Analytics",
+    "description": "UnifiedBeez provides actionable analytics that let you understand your audience, optimize communication strategies, and make data-driven decisions effortlessly.",
+    "image": "https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/signup-slide-4.png",
+    "testimonial": {
+      "review": "The analytics dashboard is a game-changer. We can now see exactly how our customers interact with us, which has enabled smarter, faster decision-making across our teams.",
+      "name": "Ngozi",
+      "role": "Data Analyst",
+      "company": "Apple",
+      "avatar": "user.png"
+    }
+  }
+]

@@ -18,7 +18,7 @@ export function useAppQuery<TData, TError = unknown>(
   });
 }
 
-export function useAppMutation<TData, TVariables, TError = unknown>(
+export function useAppMutation<TVariables, TData, TError = unknown>(
   fn: (variables: TVariables) => Promise<TData>,
   options?: Omit<UseMutationOptions<TData, TError, TVariables>, "mutationFn">,
 ) {
