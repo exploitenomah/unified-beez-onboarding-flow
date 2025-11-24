@@ -27,6 +27,7 @@ export default function LoginPage() {
       >
         <Input
           name="Email"
+          type="email"
           value={formData.email}
           onChange={(e) => updateFormData("email", e.target.value)}
           placeholder="johndoe@company.com"

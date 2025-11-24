@@ -9,7 +9,7 @@ import { LoginFormSchema } from "./types";
 import { LOGIN_REDIRECT_ROUTE } from "./constants";
 
 export function useLoginState() {
-  return useFormStateManager({
+  return useFormStateManager<LoginFormSchema>({
     email: "",
     password: "",
     rememberMe: false,

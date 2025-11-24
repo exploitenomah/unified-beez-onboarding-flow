@@ -26,11 +26,11 @@ const EncryptedInput = forwardRef<HTMLInputElement, EncryptedInputProps>(
     return (
       <div className="w-full relative">
         <Input
+          {...props}
           ref={ref}
           error={error}
           type={isVisible ? "text" : "password"}
           className={`relative z-10 pl-6 ${className}`}
-          {...props}
         />
         <button
           onClick={toggle}

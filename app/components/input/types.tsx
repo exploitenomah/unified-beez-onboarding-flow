@@ -6,7 +6,7 @@ export interface InputProps
   error?: boolean;
 }
 
-export interface EncryptedInputProps extends InputProps {
+export interface EncryptedInputProps extends Omit<InputProps, "type"> {
   defaultVisible?: boolean;
   visibleIcon?: React.ReactNode;
   hiddenIcon?: React.ReactNode;
@@ -34,7 +34,7 @@ export interface InputGroupProps {
 }
 
 export interface CheckboxProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   label?: string;
   className?: string;
   labelClassName?: string;
