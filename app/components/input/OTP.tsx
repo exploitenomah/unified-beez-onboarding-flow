@@ -1,14 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, ChangeEvent, KeyboardEvent } from "react";
-
-interface OTPInputProps {
-  length?: number;
-  onChange?: (otp: string) => void;
-  autoFocus?: boolean;
-  className?: string;
-  error?: string;
-  hasError?: boolean;
-}
+import { OTPInputProps } from "./types";
 
 export default function OTPInput({
   length = 6,
