@@ -9,7 +9,7 @@ export default function ContainerWithCommChannelsFooter({
 }) {
   return (
     <div
-      className={`h-dvh overflow-auto grid grid-col grid-rows-[1fr_10rem] items-center bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)] ${className}`}
+      className={`h-dvh overflow-auto grid grid-col grid-rows-[1fr_10rem] items-center bg-gradient-yellow-1 ${className}`}
     >
       {children}
       <CommunicationChannelsFooter />

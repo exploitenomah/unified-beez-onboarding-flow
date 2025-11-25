@@ -1,5 +1,6 @@
 type ButtonVariant = "primary" | "secondary" | "tertiary";
 type ButtonColor = "primary" | "yellow" | "danger";
+export type ButtonSize = "sm" | "md" | "lg";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,6 +10,7 @@ export interface ButtonProps
   endIcon?: React.ReactNode;
   startIcon?: React.ReactNode;
   isLoading?: boolean;
+  size?: ButtonSize;
 }
 
 export interface ButtonPropsWithColor extends ButtonProps {
@@ -37,4 +39,13 @@ export interface TextButtonAsLinkProps
   extends React.LinkHTMLAttributes<HTMLAnchorElement> {
   as?: string;
   disabled?: never;
+}
+export interface GradientButtonProps {
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+  variant?: "border" | "solid";
+  size?: "sm" | "md" | "lg";
+  loading?: boolean;
+  className?: string;
+  fullWidth?: boolean;
 }

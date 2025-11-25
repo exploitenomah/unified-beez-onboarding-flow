@@ -4,6 +4,7 @@ import Icon from "@components/icons/Icon";
 import OnboardingStepCard from "./OnboardingStepCard";
 import {
   HeadingAndSubHeadingProps,
+  OnboardingStepCardWithCustomHeader,
   OnboardingStepCardWithHeaderIcon,
   OnboardingStepCardWithHeaderImage,
 } from "./types";
@@ -17,10 +18,15 @@ export default function OnboardingStepCardWithHeader({
   imageWidth,
   imageHeight,
   icon,
+  customHeader,
   type,
   heading,
   subHeading,
-}: (OnboardingStepCardWithHeaderImage | OnboardingStepCardWithHeaderIcon) &
+}: (
+  | OnboardingStepCardWithHeaderImage
+  | OnboardingStepCardWithHeaderIcon
+  | OnboardingStepCardWithCustomHeader
+) &
   Partial<HeadingAndSubHeadingProps>) {
   return (
     <OnboardingStepCard className={className}>
@@ -29,6 +35,7 @@ export default function OnboardingStepCardWithHeader({
           className={`mb-6 mx-auto w-max 
         ${icon ? "p-2 bg-white rounded-md border border-[#ECECEC] shadow-[1px_3px_6.9px_0_rgba(0,0,0,0.10)]" : ""}`}
         >
+          {type === "custom" && customHeader}
           {type === "image" && isString(imageSrc) && isString(imageAlt) && (
             <Image
               loading="eager"
