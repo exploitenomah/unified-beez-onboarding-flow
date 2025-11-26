@@ -45,7 +45,8 @@ html {
 }
 
 @theme inline {
-  --breakpoint-lg: 60rem;
+  --breakpoint-md: 58.25rem;
+  --breakpoint-lg: 64rem;
   --inset-shadow-md: 2px 0 0 0 #053d27 inset;
   --color-dark-base-100: var(--dark-base-100);
   --color-dark-base-90: var(--dark-base-90);

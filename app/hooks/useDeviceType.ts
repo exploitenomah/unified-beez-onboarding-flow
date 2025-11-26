@@ -7,11 +7,11 @@ export function useDeviceType() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const mobile = window.matchMedia("(max-width: 767px)");
+    const mobile = window.matchMedia("(max-width: 639px)");
     const tablet = window.matchMedia(
-      "(min-width: 768px) and (max-width: 1023px)",
+      "(min-width: 640px) and (max-width: 932px)",
     );
-    const desktop = window.matchMedia("(min-width: 1024px)");
+    const desktop = window.matchMedia("(min-width: 933px)");
 
     const update = () => {
       if (mobile.matches) setDevice("mobile");
