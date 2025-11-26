@@ -42,12 +42,14 @@ html {
   --gray-30: #d0d5dd;
   --gray-25: #f8f8f8;
   --gray-20: #f6f6f6;
+  --fresh-green: #29953e;
 }
 
 @theme inline {
   --breakpoint-md: 58.25rem;
   --breakpoint-lg: 64rem;
   --inset-shadow-md: 2px 0 0 0 #053d27 inset;
+  --color-fresh-green: var(--fresh-green);
   --color-dark-base-100: var(--dark-base-100);
   --color-dark-base-90: var(--dark-base-90);
   --color-dark-base-80: var(--dark-base-80);
@@ -186,7 +188,7 @@ html {
     @apply leading-base text-md font-normal text-dark-base-70;
   }
   .onboarding-step-card {
-    @apply w-8/9 mx-auto p-10 bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem];
+    @apply w-8/9 mx-auto px-5 py-10 md:px-10 md:py-10 bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem];
   }
   .app-modal {
     @apply fixed;
@@ -203,4 +205,23 @@ html {
   .bg-gradient-yellow-1 {
     @apply bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)];
   }
+  .section-heading {
+    @apply text-xl font-bold leading-[120%];
+  }
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-60) var(--primary-60);
+}
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--primary-60);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
 }

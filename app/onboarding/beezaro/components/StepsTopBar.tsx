@@ -7,18 +7,18 @@ import TopStepNumber from "./TopStepNumber";
 export default function StepsTopBar() {
   const { isMobile } = useDeviceType();
   const {
-    copilotOnboardingSteps,
+    steps: { copilot: copilotSteps },
     progress: {
       copilot: { currentStepIndex },
     },
   } = useOnboardingStateSelector();
   const completedSteps = useMemo(
-    () => copilotOnboardingSteps.filter((s) => s.isComplete),
-    [copilotOnboardingSteps],
+    () => copilotSteps.filter((s) => s.isComplete),
+    [copilotSteps],
   );
   return (
     <nav className="pr-3.5 lg:pr-0 flex items-center gap-5.5 sm:gap-2 md:gap-0 lg:gap-2 xl:gap-8">
-      {copilotOnboardingSteps.map((step, index) => (
+      {copilotSteps.map((step, index) => (
         <TopStep
           key={step.id}
           displayName={step.displayName}
@@ -30,7 +30,7 @@ export default function StepsTopBar() {
       <TopStepNumber
         showStartLine
         hasGap
-        number={copilotOnboardingSteps.length - completedSteps.length - 1}
+        number={copilotSteps.length - completedSteps.length - 1}
         className="sm:hidden"
       />
     </nav>

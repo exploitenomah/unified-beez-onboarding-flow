@@ -1,4 +1,5 @@
 import { isString } from "@app/utils/is";
+import SectionHeading from "@components/headings/SectionHeading";
 import { HeadingAndSubHeadingProps } from "./types";
 
 export default function HeadingAndSubHeading({
@@ -9,14 +10,15 @@ export default function HeadingAndSubHeading({
   return (
     <div className="py-3.25 flex flex-col gap-3 justify-center items-center text-center">
       {isString(heading) && (
-        <h1
-          className={`${headingVariant === "sm" ? "text-xl" : "text-2xl"} font-bold leading-[80%]"`}
+        <SectionHeading
+          as="h1"
+          className={`${headingVariant === "sm" ? "text-xl" : "text-2xl"} leading-[80%]"`}
         >
           {heading}
-        </h1>
+        </SectionHeading>
       )}
       {isString(subHeading) && (
-        <p className="text-base font-normal leading-[148%] text-dark-base-100/70">
+        <p className="text-base font-normal leading-[148%] text-dark-base-100/70 max-w-112.5">
           {subHeading}
         </p>
       )}

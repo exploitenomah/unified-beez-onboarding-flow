@@ -3,8 +3,10 @@ import manualOnboardingSteps from "./manualSteps.json";
 import copilotOnboardingSteps from "./copilotSteps.json";
 
 export const initialOnboardingState: OnboardingState = {
-  copilotOnboardingSteps,
-  manualOnboardingSteps,
+  steps: {
+    copilot: copilotOnboardingSteps,
+    manual: manualOnboardingSteps,
+  },
   progress: {
     manual: {
       currentStepIndex: 0,

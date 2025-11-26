@@ -1,0 +1,46 @@
+{
+  "firstName": "Mark",
+  "lastName": "Zuckerberg",
+  "email": "zuckerberg@meta.com",
+  "phoneNumber": "+2348012345678",
+  "countryCode": "NG",
+  "businessName": "Meta",
+  "currentPlan": {
+    "id": "plan_business_001",
+    "title": "Business Plan",
+    "tier": "business",
+    "current": true,
+
+    "pricing": {
+      "amount": 219.2,
+      "currency": "GBP",
+      "interval": "month"
+    },
+
+    "features": {
+      "highlight": "The most important features of your plan.",
+      "compareUrl": "/pricing"
+    },
+
+    "addons": [
+      {
+        "id": "addon_seats",
+        "name": "Extra Seats",
+        "quantity": 3,
+        "pricePerUnit": 10
+      },
+      {
+        "id": "addon_ai_assistant",
+        "name": "Extra AI Assistant",
+        "quantity": 2,
+        "pricePerUnit": 20
+      },
+      {
+        "id": "addon_whatsapp_channel",
+        "name": "Extra Whatsapp Channel",
+        "quantity": 2,
+        "pricePerUnit": 15
+      }
+    ]
+  }
+}

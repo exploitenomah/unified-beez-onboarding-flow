@@ -1,6 +1,8 @@
 export interface OnboardingState {
-  copilotOnboardingSteps: OnboardingStep[];
-  manualOnboardingSteps: OnboardingStep[];
+  steps: {
+    copilot: OnboardingStep[];
+    manual: OnboardingStep[];
+  };
   progress: {
     manual: {
       currentStepIndex: number;
