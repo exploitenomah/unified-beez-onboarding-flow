@@ -1,9 +1,12 @@
 import PlayIcon from "@assets/svgs/PlayIcon";
 import TimesIcon from "@assets/svgs/Times";
+import useToggleRoute from "@hooks/useToggleRoute";
 import Button from "@components/button/Button";
 import GradientBorderButton from "@components/button/GradientBorderButton";
 
 export default function LayoutHeader() {
+  const { goTo } = useToggleRoute();
+
   return (
     <header className="flex items-center justify-end gap-2.5 border-b border-b-gray-30 py-[2.9rem] px-6">
       <GradientBorderButton variant="border" size="sm">
@@ -11,6 +14,7 @@ export default function LayoutHeader() {
         Play Tutorial
       </GradientBorderButton>
       <Button
+        onClick={() => goTo("/onboarding")}
         variant="tertiary"
         color="danger"
         size="sm"
