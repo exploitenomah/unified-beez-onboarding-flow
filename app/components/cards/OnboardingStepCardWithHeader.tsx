@@ -22,6 +22,7 @@ export default function OnboardingStepCardWithHeader({
   type,
   heading,
   subHeading,
+  headingVariant,
 }: (
   | OnboardingStepCardWithHeaderImage
   | OnboardingStepCardWithHeaderIcon
@@ -48,7 +49,11 @@ export default function OnboardingStepCardWithHeader({
           {type === "icon" && !isUndefined(icon) && <Icon icon={icon} />}
         </div>
         {(isString(heading) || isString(subHeading)) && (
-          <HeadingAndSubHeading heading={heading} subHeading={subHeading} />
+          <HeadingAndSubHeading
+            headingVariant={headingVariant}
+            heading={heading}
+            subHeading={subHeading}
+          />
         )}
       </div>
       {children}

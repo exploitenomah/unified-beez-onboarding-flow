@@ -44,4 +44,5 @@ export interface OnboardingStepCardWithHeaderIcon
 export interface HeadingAndSubHeadingProps {
   heading?: string;
   subHeading?: string;
+  headingVariant?: "sm" | "md";
 }
