@@ -9,3 +9,5 @@ export interface UsePathnameCheckerOptions {
   paths?: string[];
   prefix?: string;
 }
+
+export type DeviceType = "mobile" | "tablet" | "desktop";

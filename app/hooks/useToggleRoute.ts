@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { isFunction, isUndefined } from "@utils/is";
+import { isFunction, isUndefined } from "@app/utils/is";
 
 export default function useToggleRoute(
   initialRoute?: string | ((pathName: string) => string),

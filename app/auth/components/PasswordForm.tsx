@@ -90,6 +90,7 @@ export function PasswordForm({
         backLabel="Go Back"
         nextType="submit"
         onBack={onCancel}
+        onNext={() => {}}
         isNextDisabled={!isValid || !allFieldsArePresent || isLoading}
       />
     </AppForm>

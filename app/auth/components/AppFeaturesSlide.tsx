@@ -25,7 +25,7 @@ export default function AppFeaturesSlide({
           />
         ))}
       </div>
-      <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,#053D27_0%,#FAB403_100%)]" />
+      <div className="absolute inset-0 z-10 bg-brand-gradient-1" />
       <div className="absolute inset-0 z-20 opacity-20 bg-[url(https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/auth-layout-bg-pattern-1.png)]" />
       <div className="absolute inset-0 z-30 bg-size-[50%] bg-[url(https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/auth-layout-bg-pattern-2.png)]" />
       <div className="relative z-50 mt-18 w-[calc(100%-8rem)] mx-auto">

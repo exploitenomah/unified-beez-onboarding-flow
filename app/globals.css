@@ -42,10 +42,14 @@ html {
   --gray-30: #d0d5dd;
   --gray-25: #f8f8f8;
   --gray-20: #f6f6f6;
+  --fresh-green: #29953e;
 }
 
 @theme inline {
-  --breakpoint-lg: 60rem;
+  --breakpoint-md: 58.25rem;
+  --breakpoint-lg: 64rem;
+  --inset-shadow-md: 2px 0 0 0 #053d27 inset;
+  --color-fresh-green: var(--fresh-green);
   --color-dark-base-100: var(--dark-base-100);
   --color-dark-base-90: var(--dark-base-90);
   --color-dark-base-80: var(--dark-base-80);
@@ -128,7 +132,7 @@ html {
   }
   .checkbox {
     @apply bg-white flex items-center justify-center rounded border-2 cursor-pointer border-gray-30 text-transparent
-           shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90 
+           shrink-0 transition peer-checked:bg-primary-90 peer-checked:border-primary-90  peer-disabled:peer-checked:bg-gray-35 peer-disabled:text-white
            peer-checked:text-white peer-focus:not-disabled:border-primary-90 focus:not-disabled:outline-none 
            peer-focus:not-disabled:shadow-[0_1px_2px_0_rgba(16,24,40,0.05),0_0_0_4px_rgba(5,61,39,0.2)];
   }
@@ -137,7 +141,16 @@ html {
            placeholder:text-dark-base-40 placeholder:text-4xl placeholder:text-center;
   }
   .btn {
-    @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75;
+    @apply flex items-center gap-2 justify-center cursor-pointer transition px-4.5 py-2.5 rounded-md text-base leading-base font-bold shadow-sm disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none;
+  }
+  .btn.sm {
+    @apply px-2 py-1.5;
+  }
+  .btn.md {
+    @apply px-4.5 py-2.5;
+  }
+  .btn.lg {
+    @apply px-6 py-4;
   }
   .btn.secondary {
     @apply border border-solid border-gray-30 text-dark-base-70 bg-white hover:bg-gray-25 disabled:hover:bg-white;
@@ -174,4 +187,41 @@ html {
   .sub-text {
     @apply leading-base text-md font-normal text-dark-base-70;
   }
+  .onboarding-step-card {
+    @apply w-8/9 mx-auto px-5 py-10 md:px-10 md:py-10 bg-[linear-gradient(165deg,#E6FAF2_-11.22%,#E3CF9B_219.35%)] rounded-[2.4rem];
+  }
+  .app-modal {
+    @apply fixed;
+  }
+  .app-modal-overlay {
+    @apply fixed w-screen h-screen bg-black/25 backdrop-blur-[25px] flex;
+  }
+  .bg-brand-gradient-1 {
+    @apply bg-[linear-gradient(180deg,#053d27_0%,#fab403_100%)];
+  }
+  .bg-brand-gradient-2 {
+    @apply bg-[linear-gradient(143deg,#053D27_21.47%,#FAB403_289.64%)];
+  }
+  .bg-gradient-yellow-1 {
+    @apply bg-[linear-gradient(149deg,#FFFFFF_18.59%,#FCEDC6_143.2%)];
+  }
+  .section-heading {
+    @apply text-xl font-bold leading-[120%];
+  }
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-60) var(--primary-60);
+}
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--primary-60);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
 }

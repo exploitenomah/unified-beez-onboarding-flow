@@ -63,6 +63,7 @@ export default function ForgotPassword() {
         </p>
         <StepActions
           onBack={() => goTo(BACK_REDIRECT_ROUTE)}
+          onNext={() => {}}
           nextLabel="Continue"
           backLabel="Go Back"
           nextType="submit"

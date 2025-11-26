@@ -16,8 +16,13 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           className={`peer sr-only ${className}`}
           {...props}
         />
-        <span className="checkbox" style={{ width: +width, height: +height }}>
-          <CheckMark width={+width - 4} height={+height - 4} />
+        <span
+          className={`checkbox ${className}`}
+          style={{ width: +width, height: +height }}
+        >
+          {props.checked && (
+            <CheckMark width={+width - 6} height={+height - 6} />
+          )}
         </span>
         {label && (
           <span

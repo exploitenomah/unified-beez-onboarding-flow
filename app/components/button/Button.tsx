@@ -10,11 +10,13 @@ const Button = ({
   endIcon,
   startIcon,
   isLoading,
+  size = "md",
   ...props
 }: ButtonPropsWithColor | ButtonPropsWithoutColor) => {
   return (
     <button
       className={`btn 
+        ${size}
         ${variant === "secondary" ? variant : `${variant}-${color}`} 
         ${fullWidth ? "w-full" : "w-fit"} 
         ${className}`}
