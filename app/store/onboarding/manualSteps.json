@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "name": "accountSummaryAndPlan",
+    "isComplete": false,
+    "displayName": "Account Summary & Plan",
+    "subSteps": [
+      {
+        "parentStepId": 1,
+        "id": 1,
+        "name": "accountSummaryAndPlan",
+        "isComplete": false,
+        "displayName": "Account Summary & Plan"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "userTypeDetectionAndInfo",
+    "isComplete": false,
+    "displayName": "User Type Detection & Info",
+    "subSteps": [
+      {
+        "parentStepId": 2,
+        "id": 1,
+        "name": "businessName",
+        "isComplete": false,
+        "displayName": "Business Name"
+      },
+      {
+        "parentStepId": 2,
+        "id": 2,
+        "name": "businessIndustry",
+        "isComplete": false,
+        "displayName": "What industry is your business based?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 3,
+        "name": "businessObjectives",
+        "isComplete": false,
+        "displayName": "What are the objectives of your business?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 4,
+        "name": "businessGoals",
+        "isComplete": false,
+        "displayName": "What is the goal of your business?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 5,
+        "name": "knowledgeAndFiles",
+        "isComplete": false,
+        "displayName": "Knowledge + Files"
+      },
+      {
+        "parentStepId": 2,
+        "id": 6,
+        "name": "businessDescription",
+        "isComplete": false,
+        "displayName": "Business description & logo upload"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "teamAndRoleSetup",
+    "isComplete": false,
+    "displayName": "Team & Role Setup",
+    "subSteps": [
+      {
+        "parentStepId": 3,
+        "id": 1,
+        "name": "addTeamMembers",
+        "isComplete": false,
+        "displayName": "Team & Role Setup"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "aiAssistantCreation",
+    "isComplete": false,
+    "displayName": "AI Assistant Creation",
+    "subSteps": [
+      {
+        "parentStepId": 4,
+        "id": 1,
+        "name": "chooseAIAssistant",
+        "isComplete": false,
+        "displayName": "Choose AI assistant name"
+      },
+      {
+        "parentStepId": 4,
+        "id": 2,
+        "name": "chooseAIPersonality",
+        "isComplete": false,
+        "displayName": "Select tone, style and personality type"
+      },
+      {
+        "parentStepId": 4,
+        "id": 3,
+        "name": "aiSettings",
+        "isComplete": false,
+        "displayName": "Settings, Live Preview Chatbox"
+      },
+      {
+        "parentStepId": 4,
+        "id": 4,
+        "name": "aiPreview",
+        "isComplete": false,
+        "displayName": "Created AI Assistant Preview"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "channelIntegration",
+    "isComplete": false,
+    "displayName": "Channel Integration",
+    "subSteps": [
+      {
+        "parentStepId": 5,
+        "id": 1,
+        "name": "chooseChannels",
+        "isComplete": false,
+        "displayName": "Which channels would you like to connect?"
+      },
+      {
+        "parentStepId": 5,
+        "id": 2,
+        "name": "channelsSettings",
+        "isComplete": false,
+        "displayName": "Connected channels settings"
+      },
+      {
+        "parentStepId": 5,
+        "id": 3,
+        "name": "channelsPreview",
+        "isComplete": false,
+        "displayName": "Connected channels preview"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "perChannelAIConfiguration",
+    "isComplete": false,
+    "displayName": "Per-Channel AI Configuration",
+    "subSteps": [
+      {
+        "parentStepId": 6,
+        "id": 1,
+        "name": "smartSuggestions",
+        "isComplete": false,
+        "displayName": "Smart Suggestions (BeeBot Nudges)"
+      },
+      {
+        "parentStepId": 6,
+        "id": 2,
+        "name": "aiProfileSelection",
+        "isComplete": false,
+        "displayName": "AI Profile selection"
+      },
+      {
+        "parentStepId": 6,
+        "id": 3,
+        "name": "escalationRules",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Escalation Rules"
+      },
+      {
+        "parentStepId": 6,
+        "id": 4,
+        "name": "followUpTriggers",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Follow-Up Triggers"
+      },
+      {
+        "parentStepId": 6,
+        "id": 5,
+        "name": "aiAssistantTest",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - AI Assistant Testing"
+      },
+      {
+        "parentStepId": 6,
+        "id": 6,
+        "name": "configurationOverview",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Configuration overview"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "webChatConnection",
+    "isComplete": false,
+    "displayName": "Web Chat Connection",
+    "subSteps": [
+      {
+        "parentStepId": 7,
+        "id": 1,
+        "name": "channelsAndLinks",
+        "isComplete": false,
+        "displayName": "Channels & Links"
+      },
+      {
+        "parentStepId": 7,
+        "id": 2,
+        "name": "appearance",
+        "isComplete": false,
+        "displayName": "Appearance"
+      },
+      {
+        "parentStepId": 7,
+        "id": 3,
+        "name": "copyAndLocalisation",
+        "isComplete": false,
+        "displayName": "Copy & Localisation"
+      },
+      {
+        "parentStepId": 7,
+        "id": 4,
+        "name": "installation",
+        "isComplete": false,
+        "displayName": "Installation"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "smartAutomations",
+    "isComplete": false,
+    "displayName": "Smart Automations - UnifiedBeez Automation Template Library",
+    "subSteps": [
+      {
+        "parentStepId": 7,
+        "id": 1,
+        "name": "industryTypePreview",
+        "isComplete": false,
+        "displayName": "Industry type preview"
+      },
+      {
+        "parentStepId": 7,
+        "id": 2,
+        "name": "templateLibrary",
+        "isComplete": false,
+        "displayName": "UnifiedBeez Automation Template Library"
+      },
+      {
+        "parentStepId": 7,
+        "id": 3,
+        "name": "templateCustomization",
+        "isComplete": false,
+        "displayName": "Automation Template Customisation"
+      }
+    ]
+  }
+]
