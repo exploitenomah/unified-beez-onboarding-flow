@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "name": "businessIdentity",
+    "isComplete": false,
+    "displayName": "Business Identity",
+    "subSteps": [
+      {
+        "parentStepId": 1,
+        "id": 1,
+        "name": "accountSummaryAndPlan",
+        "isComplete": false,
+        "displayName": "Account Summary & Plan"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "teamMembers",
+    "isComplete": false,
+    "displayName": "Team members",
+    "subSteps": [
+      {
+        "parentStepId": 2,
+        "id": 1,
+        "name": "businessName",
+        "isComplete": false,
+        "displayName": "Business Name"
+      },
+      {
+        "parentStepId": 2,
+        "id": 2,
+        "name": "businessIndustry",
+        "isComplete": false,
+        "displayName": "What industry is your business based?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 3,
+        "name": "businessObjectives",
+        "isComplete": false,
+        "displayName": "What are the objectives of your business?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 4,
+        "name": "businessGoals",
+        "isComplete": false,
+        "displayName": "What is the goal of your business?"
+      },
+      {
+        "parentStepId": 2,
+        "id": 5,
+        "name": "knowledgeAndFiles",
+        "isComplete": false,
+        "displayName": "Knowledge + Files"
+      },
+      {
+        "parentStepId": 2,
+        "id": 6,
+        "name": "businessDescription",
+        "isComplete": false,
+        "displayName": "Business description & logo upload"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "channels",
+    "isComplete": false,
+    "displayName": "Channels",
+    "subSteps": [
+      {
+        "parentStepId": 3,
+        "id": 1,
+        "name": "addTeamMembers",
+        "isComplete": false,
+        "displayName": "Team & Role Setup"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "fallbackLogic",
+    "isComplete": false,
+    "displayName": "Fall-back logic",
+    "subSteps": [
+      {
+        "parentStepId": 4,
+        "id": 1,
+        "name": "chooseAIAssistant",
+        "isComplete": false,
+        "displayName": "Choose AI assistant name"
+      },
+      {
+        "parentStepId": 4,
+        "id": 2,
+        "name": "chooseAIPersonality",
+        "isComplete": false,
+        "displayName": "Select tone, style and personality type"
+      },
+      {
+        "parentStepId": 4,
+        "id": 3,
+        "name": "aiSettings",
+        "isComplete": false,
+        "displayName": "Settings, Live Preview Chatbox"
+      },
+      {
+        "parentStepId": 4,
+        "id": 4,
+        "name": "aiPreview",
+        "isComplete": false,
+        "displayName": "Created AI Assistant Preview"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "aiAssistant",
+    "isComplete": false,
+    "displayName": "AI Assistant",
+    "subSteps": [
+      {
+        "parentStepId": 5,
+        "id": 1,
+        "name": "chooseChannels",
+        "isComplete": false,
+        "displayName": "Which channels would you like to connect?"
+      },
+      {
+        "parentStepId": 5,
+        "id": 2,
+        "name": "channelsSettings",
+        "isComplete": false,
+        "displayName": "Connected channels settings"
+      },
+      {
+        "parentStepId": 5,
+        "id": 3,
+        "name": "channelsPreview",
+        "isComplete": false,
+        "displayName": "Connected channels preview"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "automation",
+    "isComplete": false,
+    "displayName": "Automation",
+    "subSteps": [
+      {
+        "parentStepId": 6,
+        "id": 1,
+        "name": "smartSuggestions",
+        "isComplete": false,
+        "displayName": "Smart Suggestions (BeeBot Nudges)"
+      },
+      {
+        "parentStepId": 6,
+        "id": 2,
+        "name": "aiProfileSelection",
+        "isComplete": false,
+        "displayName": "AI Profile selection"
+      },
+      {
+        "parentStepId": 6,
+        "id": 3,
+        "name": "escalationRules",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Escalation Rules"
+      },
+      {
+        "parentStepId": 6,
+        "id": 4,
+        "name": "followUpTriggers",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Follow-Up Triggers"
+      },
+      {
+        "parentStepId": 6,
+        "id": 5,
+        "name": "aiAssistantTest",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - AI Assistant Testing"
+      },
+      {
+        "parentStepId": 6,
+        "id": 6,
+        "name": "configurationOverview",
+        "isComplete": false,
+        "displayName": "Per-channel AI Configuration - Configuration overview"
+      }
+    ]
+  }
+]

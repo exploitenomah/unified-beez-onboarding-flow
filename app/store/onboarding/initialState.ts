@@ -1,8 +1,9 @@
 import { OnboardingState } from "./types";
 import manualOnboardingSteps from "./manualSteps.json";
+import copilotOnboardingSteps from "./copilotSteps.json";
 
 export const initialOnboardingState: OnboardingState = {
-  copilotOnboardingSteps: [],
+  copilotOnboardingSteps,
   manualOnboardingSteps,
   progress: {
     manual: {

@@ -1,7 +1,8 @@
 import { Step } from "@store/onboarding/types";
 
 export interface SideStepProps {
-  index: number;
+  activeSubStepIndex: number;
+  isActive: boolean;
   name: string;
   displayName: string;
   stepNumber: number;

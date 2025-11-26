@@ -2,8 +2,13 @@ import useOnboardingStateSelector from "@store/onboarding/onboarding.selector";
 import LogoHeader from "./LogoHeader";
 import SideStep from "./SideStep";
 
-export default function StepsSideBar({}: { show: boolean }) {
-  const { manualOnboardingSteps } = useOnboardingStateSelector();
+export default function StepsSideBar() {
+  const {
+    manualOnboardingSteps,
+    progress: {
+      manual: { currentStepIndex, currentSubStepIndex },
+    },
+  } = useOnboardingStateSelector();
   return (
     <div className="h-full">
       <LogoHeader />
@@ -16,7 +21,8 @@ export default function StepsSideBar({}: { show: boolean }) {
               displayName={step.displayName}
               stepNumber={index + 1}
               subSteps={step.subSteps}
-              index={index}
+              isActive={index === currentStepIndex}
+              activeSubStepIndex={currentSubStepIndex}
             />
           ))}
         </div>

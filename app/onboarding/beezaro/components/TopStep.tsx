@@ -5,8 +5,8 @@ export default function TopStep({
   displayName,
   stepNumber,
   showStartLine,
+  isActiveStep,
 }: TopStepProps) {
-  const isActiveStep = stepNumber === 2;
   return (
     <div
       className={`items-center md:gap-2 ${isActiveStep ? "flex md:mx-1 lg:mx-0 gap-2 md:gap-1 lg:gap-2" : "hidden sm:flex"}`}

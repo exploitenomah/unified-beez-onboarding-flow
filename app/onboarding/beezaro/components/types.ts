@@ -2,6 +2,7 @@ export interface TopStepProps {
   displayName: string;
   stepNumber: number;
   showStartLine?: boolean;
+  isActiveStep?: boolean;
 }
 
 export interface TopStepNumberProps {
