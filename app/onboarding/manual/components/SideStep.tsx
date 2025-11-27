@@ -1,4 +1,5 @@
 import Checkbox from "@components/input/Checkbox";
+import useSmartScrollIntoView from "@hooks/useSmartScrollIntoView";
 import { SideStepProps } from "./types";
 
 export default function SideStep({
@@ -8,8 +9,14 @@ export default function SideStep({
   isActive,
   activeSubStepIndex,
 }: SideStepProps) {
+  const { ref } = useSmartScrollIntoView<HTMLDivElement>({
+    behavior: "smooth",
+    requireFullVisibility: true,
+    enabled: isActive,
+  });
   return (
     <div
+      ref={ref}
       className={`whitespace-normal p-2 flex flex-col gap-2 border-x border-gray-30/50 ${isActive ? "inset-shadow-md" : ""}`}
     >
       <span

@@ -11,3 +11,12 @@ export interface UsePathnameCheckerOptions {
 }
 
 export type DeviceType = "mobile" | "tablet" | "desktop";
+
+export interface SmartScrollIntoViewOptions {
+  behavior?: ScrollBehavior;
+  block?: ScrollLogicalPosition;
+  container?: HTMLElement | null;
+  enabled?: boolean;
+  requireFullVisibility?: boolean;
+  rootMargin?: string;
+}
