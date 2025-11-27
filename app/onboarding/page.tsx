@@ -25,7 +25,7 @@ export default function OnboardingWelcome() {
         Let BeeZora Set Everything Up For Me
       </Button>
       <Button
-        onClick={() => goTo("/onboarding/manual/step-1")}
+        onClick={() => goTo("/onboarding/manual")}
         endIcon={<RightChevron className="ml-2" />}
         fullWidth
         variant="primary"

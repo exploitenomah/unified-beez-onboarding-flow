@@ -5,7 +5,7 @@ import { usePathnameChecker } from "@hooks/usePathnameChecker";
 
 export default function OnboardingLayout({ children }: PropsWithChildren) {
   const { matches: isWelcomePage } = usePathnameChecker({
-    paths: ["/onboarding", "/onboarding/beezaro"],
+    paths: ["/onboarding", "/onboarding/beezaro", "/onboarding/manual"],
   });
   if (isWelcomePage)
     return (

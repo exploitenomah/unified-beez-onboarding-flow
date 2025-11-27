@@ -23,24 +23,24 @@ export default function OnboardingWelcome() {
           imageSrc="https://zqkrxgdm4ftxn2kt.public.blob.vercel-storage.com/bee-icon.png"
           imageAlt="UnifiedBeez Logo"
           className="bg-[linear-gradient(white)] w-full max-w-167.5 flex flex-col gap-4"
-          heading="Hi there! I'm Beezaro"
-          subHeading="I'll set everything up for you in just a few questions. Ready?"
+          heading="Welcome to UnifiedBeez"
+          subHeading="Welcome to UnifiedBeez. Let's get your AI assistant and communication channels set up. It only takes a few minutes"
         >
           <Button
-            onClick={() => goTo("/onboarding/beezaro/step-1")}
+            onClick={() => goTo("/onboarding/manual/step-1")}
             fullWidth
             className="mt-3.25 block"
           >
-            Yes, let&apos;s go
+            Start Setup
           </Button>
           <Button
-            onClick={() => goTo("/onboarding/manual")}
+            onClick={() => goTo("/dashboard")}
             endIcon={<RightChevron className="ml-2" />}
             fullWidth
             variant="secondary"
             className="text-primary-100 bg-secondary-yellow-10 hover:bg-secondary-yellow-30"
           >
-            Show me the manual setup instead
+            Skip & Explore Dashboard
           </Button>
         </OnboardingStepCardWithHeader>
       </AppModal>

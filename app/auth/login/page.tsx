@@ -52,6 +52,7 @@ export default function LoginPage() {
         <Checkbox
           onChange={(e) => updateFormData("rememberMe", e.target.checked)}
           label="Remember me"
+          checked={formData.rememberMe}
         />
         <TextButton
           as="a"
