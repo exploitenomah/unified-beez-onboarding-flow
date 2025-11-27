@@ -5,13 +5,15 @@ import Input from "@components/input/Input";
 import InputGroup from "@components/input/InputGroup";
 import StepActions from "@components/stepActions/StepActions";
 import userData from "@app/onboarding/data.json";
-import useToggleRoute from "@hooks/useToggleRoute";
-import { useGoToNextStep } from "@app/onboarding/hooks/useChangeStep";
+import {
+  useGoToNextStep,
+  useGoToPreviousStep,
+} from "@app/onboarding/hooks/useChangeStep";
 import useOnboardingStateSelector from "@store/onboarding/onboarding.selector";
 import Badge from "@components/badge/badge";
 
 export default function OnboardingWelcome() {
-  const { goTo } = useToggleRoute();
+  const { handleBack } = useGoToPreviousStep("manual");
   const { handleNext } = useGoToNextStep("manual");
   const {
     progress: {
@@ -45,7 +47,7 @@ export default function OnboardingWelcome() {
           </InputGroup>
 
           <StepActions
-            onBack={() => goTo("/onboarding")}
+            onBack={handleBack}
             onNext={handleNext}
             nextLabel={"Continue"}
             backLabel={"Go Back"}

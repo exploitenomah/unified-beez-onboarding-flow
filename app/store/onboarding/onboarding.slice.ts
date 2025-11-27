@@ -8,7 +8,13 @@ const onBoardingSlice = createSlice({
   reducers: onboardingReducers,
 });
 
-export const { goToNextStep, goToNextSubStep, resetCurrentSubStepIndex } =
-  onBoardingSlice.actions;
+export const {
+  goToNextStep,
+  goToNextSubStep,
+  resetCurrentSubStepIndex,
+  goToPreviousStep,
+  goToPreviousSubStep,
+  updateCurrentSubStep,
+} = onBoardingSlice.actions;
 
 export default onBoardingSlice.reducer;

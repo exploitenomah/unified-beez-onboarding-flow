@@ -2,13 +2,15 @@
 
 import OnboardingStepCardWithHeader from "@components/cards/OnboardingStepCardWithHeader";
 import StepActions from "@components/stepActions/StepActions";
-import useToggleRoute from "@hooks/useToggleRoute";
-import { useGoToNextStep } from "@app/onboarding/hooks/useChangeStep";
+import {
+  useGoToNextStep,
+  useGoToPreviousStep,
+} from "@app/onboarding/hooks/useChangeStep";
 import useOnboardingStateSelector from "@store/onboarding/onboarding.selector";
 import Badge from "@components/badge/badge";
 
 export default function OnboardingWelcome() {
-  const { goTo } = useToggleRoute();
+  const { handleBack } = useGoToPreviousStep("manual");
   const { handleNext } = useGoToNextStep("manual");
   const {
     progress: {
@@ -37,7 +39,7 @@ export default function OnboardingWelcome() {
       >
         <div className="flex flex-col gap-4 mt-50">
           <StepActions
-            onBack={() => goTo("/onboarding")}
+            onBack={handleBack}
             onNext={handleNext}
             nextLabel={"Continue"}
             backLabel={"Go Back"}

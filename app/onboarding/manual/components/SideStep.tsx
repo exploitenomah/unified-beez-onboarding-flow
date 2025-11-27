@@ -10,7 +10,7 @@ export default function SideStep({
 }: SideStepProps) {
   return (
     <div
-      className={`p-2 flex flex-col gap-2 border-x border-gray-30/50 ${isActive ? "inset-shadow-md" : ""}`}
+      className={`whitespace-normal p-2 flex flex-col gap-2 border-x border-gray-30/50 ${isActive ? "inset-shadow-md" : ""}`}
     >
       <span
         className={`pl-2 text-md font-bold leading-base tracking-[-0.5] ${isActive ? "text-primary-100" : "text-gray-35"}`}
@@ -23,9 +23,7 @@ export default function SideStep({
             key={subStep.name}
             className={`pl-4 pr-2 py-2 flex justify-between items-center text-sm font-normal leading-base ${idx === activeSubStepIndex && isActive ? "bg-gradient-yellow-1 border border-current text-primary-100 shadow-sm rounded" : "text-gray-35"}`}
           >
-            <span className="block max-w-37 whitespace-normal ">
-              {subStep.displayName}
-            </span>
+            <span className="block max-w-37">{subStep.displayName}</span>
             <Checkbox
               width={18}
               height={18}
