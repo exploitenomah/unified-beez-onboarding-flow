@@ -30,6 +30,14 @@ const onboardingReducers = {
     state.progress[flow].currentSubStepIndex =
       state.progress[flow].currentSubStepIndex - 1;
   },
+  updateCurrentStep: (
+    state: OnboardingState,
+    {
+      payload: { flow, update },
+    }: PayloadAction<{ flow: "manual" | "copilot"; update: number }>,
+  ) => {
+    state.progress[flow].currentStepIndex = update;
+  },
   updateCurrentSubStep: (
     state: OnboardingState,
     {

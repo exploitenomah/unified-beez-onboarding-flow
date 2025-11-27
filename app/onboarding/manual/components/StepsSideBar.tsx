@@ -1,4 +1,5 @@
 import useOnboardingStateSelector from "@store/onboarding/onboarding.selector";
+import { useMoveToStepAndSubstep } from "@app/onboarding/hooks/useChangeStep";
 import LogoHeader from "./LogoHeader";
 import SideStep from "./SideStep";
 
@@ -9,6 +10,8 @@ export default function StepsSideBar() {
       manual: { currentStepIndex, currentSubStepIndex },
     },
   } = useOnboardingStateSelector();
+  const { moveToStepAndSubStep } = useMoveToStepAndSubstep("manual");
+
   return (
     <div className="h-full">
       <LogoHeader />
@@ -23,6 +26,10 @@ export default function StepsSideBar() {
               subSteps={step.subSteps}
               isActive={index === currentStepIndex}
               activeSubStepIndex={currentSubStepIndex}
+              handleClick={(subStepIndex: number) =>
+                manualSteps[index].isComplete &&
+                moveToStepAndSubStep({ stepIndex: index, subStepIndex })
+              }
             />
           ))}
         </div>

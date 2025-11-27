@@ -8,6 +8,7 @@ export default function SideStep({
   subSteps,
   isActive,
   activeSubStepIndex,
+  handleClick = () => {},
 }: SideStepProps) {
   const { ref } = useSmartScrollIntoView<HTMLDivElement>({
     behavior: "smooth",
@@ -26,21 +27,24 @@ export default function SideStep({
       </span>
       <ul className="flex flex-col gap-2">
         {subSteps.map((subStep, idx) => (
-          <li
-            key={subStep.name}
-            className={`pl-4 pr-2 py-2 flex justify-between items-center text-sm font-normal leading-base ${idx === activeSubStepIndex && isActive ? "bg-gradient-yellow-1 border border-current text-primary-100 shadow-sm rounded" : "text-gray-35"}`}
-          >
-            <span className="block max-w-37">{subStep.displayName}</span>
-            <Checkbox
-              width={18}
-              height={18}
-              className={`rounded-full 
+          <li key={subStep.name}>
+            <button
+              onClick={() => handleClick(idx)}
+              type="button"
+              className={`w-full text-left pl-4 pr-2 py-2 flex justify-between items-center text-sm font-normal leading-base ${idx === activeSubStepIndex && isActive ? "bg-gradient-yellow-1 border border-current text-primary-100 shadow-sm rounded" : "text-gray-35 focus:outline-0"}`}
+            >
+              <span className="block max-w-37">{subStep.displayName}</span>
+              <Checkbox
+                width={18}
+                height={18}
+                className={`rounded-full 
                 ${subStep.isComplete ? "peer-read-only:bg-gray-35 peer-read-only:border-gray-35!" : ""} 
                 ${idx === activeSubStepIndex && isActive ? "peer-read-only:border-primary-100" : "peer-read-only:border-gray-35"} peer-disabled:text-white border peer-disabled:cursor-default`}
-              readOnly
-              disabled
-              checked={subStep.isComplete}
-            />
+                readOnly
+                disabled
+                checked={subStep.isComplete}
+              />
+            </button>
           </li>
         ))}
       </ul>

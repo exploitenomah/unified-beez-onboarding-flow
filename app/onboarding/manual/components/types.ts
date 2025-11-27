@@ -7,4 +7,5 @@ export interface SideStepProps {
   displayName: string;
   stepNumber: number;
   subSteps: Step[];
+  handleClick?: (subStepIndex: number) => void;
 }

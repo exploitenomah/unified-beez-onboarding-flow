@@ -8,6 +8,7 @@ import {
   goToPreviousStep,
   goToPreviousSubStep,
   resetCurrentSubStepIndex,
+  updateCurrentStep,
   updateCurrentSubStep,
 } from "@store/onboarding/onboarding.slice";
 import { OnboardingState } from "@store/onboarding/types";
@@ -97,6 +98,33 @@ export const useGoToPreviousStep = (
   ]);
 
   return { handleBack };
+};
+
+export const useMoveToStepAndSubstep = (
+  flow: keyof OnboardingState["progress"] | keyof OnboardingState["steps"],
+) => {
+  const dispatch = useAppDispatch();
+
+  const { steps } = useOnboardingStateSelector();
+
+  const moveToStepAndSubStep = useCallback(
+    ({
+      stepIndex,
+      subStepIndex,
+    }: {
+      stepIndex: number;
+      subStepIndex: number;
+    }) => {
+      if (stepIndex > steps[flow].length - 1 || stepIndex < 0) return;
+      const subStepsForStep = steps[flow][stepIndex].subSteps;
+      if (subStepIndex > subStepsForStep.length - 1 || subStepIndex < 0) return;
+      dispatch(updateCurrentStep({ flow, update: stepIndex }));
+      dispatch(updateCurrentSubStep({ flow, update: subStepIndex }));
+    },
+    [steps, flow, dispatch],
+  );
+
+  return { moveToStepAndSubStep };
 };
 
 export const useRerouteToAccurateStepInState = (

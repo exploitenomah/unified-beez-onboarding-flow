@@ -15,6 +15,7 @@ export const {
   goToPreviousStep,
   goToPreviousSubStep,
   updateCurrentSubStep,
+  updateCurrentStep,
 } = onBoardingSlice.actions;
 
 export default onBoardingSlice.reducer;
